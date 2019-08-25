@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
+import { Router, navigate } from '@reach/router'
 import SearchBar from './SearchBar'
 import { SearchContext } from '../context/SearchContext'
-import { getSearchResults } from '../modules/search/getSearchResults'
-import SearchResult from './SearchResult';
+import SearchResults from './SearchResults'
 
 export default () => {
 
@@ -12,12 +12,14 @@ export default () => {
         <div>
             <SearchBar />
             <button onClick={() => { 
-                searchContext.setResults(getSearchResults(searchContext.searchValue))}
-            }>
+                navigate(`/search?searchQuery=${searchContext.searchValue.replace(/\s+/g, '+')}`)
+            }}>
                 Search
             </button>
             <button>I'm Feeling Lucky</button>
-            { searchContext.results.map(r => <SearchResult key={r.url} page={r} />) }
+            <Router>
+                <SearchResults path='/search' />
+            </Router>
         </div>
     )
 }

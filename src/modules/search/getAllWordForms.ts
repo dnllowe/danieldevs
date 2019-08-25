@@ -30,8 +30,6 @@ export const getAllWordForms = (word: string) => {
         }
     })
     
-    console.dir(distinctWords)
-
     return distinctWords
 }
 
