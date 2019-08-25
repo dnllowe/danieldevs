@@ -7,7 +7,7 @@ import SearchPage from './components/SearchPage'
 const App: React.FC = () => {
   return (
     <SearchContextProvider>
-      <SearchPage />
+        <SearchPage />
     </SearchContextProvider>
   )
 }
