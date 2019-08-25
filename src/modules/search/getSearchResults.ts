@@ -1,7 +1,7 @@
-import pages from '../../pages'
 import { getAllWordForms } from './getAllWordForms'
+import Page from '../../pages/Page'
 
-export const getSearchResults = (searchValue: string) => {
+export const getSearchResults = (pages: Page[], searchValue: string) => {
     
     searchValue = searchValue.toLowerCase()
     const pagesCopy = [...pages]
@@ -17,10 +17,12 @@ export const getSearchResults = (searchValue: string) => {
         const contentWords = pageCopy.content.split(' ')
 
         pageCopy.keywords.forEach(keyword => {
-            const all = getAllWordForms(keyword)
-            if (searchValue.includes(keyword)) {
-                pageCopy.rank += 5
-            }
+            const allForms = getAllWordForms(keyword)
+            allForms.forEach(kw => {
+                if (searchValue.includes(kw)) {
+                    pageCopy.rank += 5
+                }
+            })
         })
 
         titleWords.forEach(word => {
@@ -49,7 +51,7 @@ export const getSearchResults = (searchValue: string) => {
     })
 
     const rankedPages = pagesCopy.filter(p => p.rank)
-    const sortedPages = rankedPages.sort((a, b) => a.rank - b.rank)
+    const sortedPages = rankedPages.sort((a, b) => b.rank - a.rank)
     
     return sortedPages
 }

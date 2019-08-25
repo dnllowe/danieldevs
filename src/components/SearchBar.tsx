@@ -1,28 +1,17 @@
 import React, { useContext, useState } from 'react'
 import AutoSuggest from 'react-autosuggest'
 import { SearchContext } from '../context/SearchContext'
-import keywords from '../modules/search/allKeywords'
-
-const getSuggestions = (searchPhrase: string) => {
-    
-    const matchList = keywords.filter(kw => {
-        if (kw.length > searchPhrase.length) {
-            return kw.includes(searchPhrase)
-        } else {
-            return searchPhrase.includes(kw)
-        }
-    })
-
-    return matchList.sort().slice(0, 5)
-}
-
-const getSuggestionValue = (suggestion: string) => suggestion
+import { getAllKeywords } from '../modules/search/allKeywords'
+import Pages from '../pages'
+import { getSuggestionValue, getSuggestions } from '../modules/search/suggestions'
 
 const renderSuggestion = (suggestion: string) => (
     <div>
         {suggestion}
     </div>
 )
+
+const keywords = getAllKeywords(Pages)
 
 export default () => {
 
@@ -34,10 +23,11 @@ export default () => {
             suggestions={suggestions}
             getSuggestionValue={getSuggestionValue}
             renderSuggestion={renderSuggestion}
-            onSuggestionsFetchRequested={({ value }) => setSuggestions(getSuggestions(value))}
+            onSuggestionsFetchRequested={({ value }) => setSuggestions(getSuggestions(keywords, value))}
             onSuggestionsClearRequested={() => setSuggestions([])}
             inputProps={{ 
                 value: searchContext.searchValue,
+                placeholder: 'What would you like to know?',
                 onChange: (e: React.FormEvent<HTMLInputElement>) => searchContext.setSearchValue(e.currentTarget.value),
             }}
         />

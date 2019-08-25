@@ -1,9 +1,19 @@
-import Pages from '../../pages'
+import Page from '../../pages/Page'
 
-let keywords: string[] = []
+export const getAllKeywords = (pages: Page[]) => {
+    
+    const keywords: string[] = []
+    const keywordMap: { [key: string]: boolean } = {}
 
-Pages.forEach(page => {
-    keywords = keywords.concat(page.keywords)
-})
+    pages.forEach(page => {
+        page.keywords.forEach(keyword => {
+            
+            if (!keywordMap[keyword]) {
+                keywords.push(keyword)
+                keywordMap[keyword] = true
+            }
+        })
+    })
 
-export default keywords
+    return keywords
+}
