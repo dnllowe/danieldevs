@@ -25,6 +25,10 @@ export default () => {
             renderSuggestion={renderSuggestion}
             onSuggestionsFetchRequested={({ value }) => setSuggestions(getSuggestions(keywords, value))}
             onSuggestionsClearRequested={() => setSuggestions([])}
+            onSuggestionSelected={(e: React.FormEvent<HTMLInputElement>) => { 
+                const suggestion = suggestions[parseInt(e.currentTarget.value)]
+                searchContext.setSearchValue(suggestion)
+            }}
             inputProps={{ 
                 value: searchContext.searchValue,
                 placeholder: 'What would you like to know?',
