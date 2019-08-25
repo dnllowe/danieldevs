@@ -1,6 +1,7 @@
 import pages from '../../pages'
+import { getAllWordForms } from './getAllWordForms'
 
-const getSearchResults = (searchValue: string) => {
+export const getSearchResults = (searchValue: string) => {
     
     searchValue = searchValue.toLowerCase()
     const pagesCopy = [...pages]
@@ -13,28 +14,36 @@ const getSearchResults = (searchValue: string) => {
         const titleWords = pageCopy.title.split(' ')
         const descriptionWords = pageCopy.description.split(' ')
         const urlWords = pageCopy.url.replace('/', '').split('-')
+        const contentWords = pageCopy.content.split(' ')
 
-        pageCopy.keywords.forEach(kw => {
-            if (searchValue.includes(kw)) {
+        pageCopy.keywords.forEach(keyword => {
+            const all = getAllWordForms(keyword)
+            if (searchValue.includes(keyword)) {
                 pageCopy.rank += 5
             }
         })
 
-        titleWords.forEach(t => {
-            if (searchValue.includes(t)) {
+        titleWords.forEach(word => {
+            if (searchValue.includes(word)) {
                 pageCopy.rank += 5
             }
         })
 
-        descriptionWords.forEach(d => {
-            if (searchValue.includes(d)) {
+        descriptionWords.forEach(word => {
+            if (searchValue.includes(word)) {
                 pageCopy.rank += 5
             }
         })
 
-        urlWords.forEach(u => {
-            if (searchValue.includes(u)) {
+        urlWords.forEach(word => {
+            if (searchValue.includes(word)) {
                 pageCopy.rank +=5
+            }
+        })
+
+        contentWords.forEach(word => {
+            if (searchValue.includes(word)) {
+                pageCopy.rank++
             }
         })
     })
@@ -44,5 +53,3 @@ const getSearchResults = (searchValue: string) => {
     
     return sortedPages
 }
-
-export default getSearchResults

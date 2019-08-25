@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import SearchBar from './SearchBar'
 import { SearchContext } from '../context/SearchContext'
-import getSearchResults from '../modules/search/getSearchResults'
+import { getSearchResults } from '../modules/search/getSearchResults'
 import SearchResult from './SearchResult';
 
 export default () => {
