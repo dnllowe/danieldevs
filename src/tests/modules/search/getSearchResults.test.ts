@@ -6,7 +6,12 @@ const ReactTestPage: Page = {
     keywords: [ 'react', 'test' ],
     description: 'A page about React and testing.',
     url: '/react-test',
-    content: 'This is a page about React and testing.',
+    content: [
+        { 
+            header: 'Overview',
+            content: 'This is a page about React and testing.'
+        }
+    ],
     rank: 0
 }
 
@@ -15,7 +20,12 @@ const NodeTestPage: Page = {
     keywords: ['node', 'test' ],
     description: 'A page about Node and testing. And it talks about testing more.',
     url: '/node-test',
-    content: 'This is a page about Node and testing. And it talks about testing more.',
+    content: [
+        {
+            header: 'Overview',
+            content: 'This is a page about Node and testing. And it talks about testing more.'
+        }
+    ],
     rank: 0
 }
 

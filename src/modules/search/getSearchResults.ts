@@ -14,7 +14,26 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
         const titleWords = pageCopy.title.split(' ')
         const descriptionWords = pageCopy.description.split(' ')
         const urlWords = pageCopy.url.replace('/', '').split('-')
-        const contentWords = pageCopy.content.split(' ')
+
+        pageCopy.content.forEach(c => {
+            const headerWords = c.header.split(' ')
+            const contentWords = c.content.split(' ')
+
+            headerWords.forEach(word => {
+            
+                if (searchValue.includes(word)) {
+                    pageCopy.rank += 3
+                }
+            })
+
+            contentWords.forEach(word => {
+        
+                if (searchValue.includes(word)) {
+                    pageCopy.rank++
+                }
+            })
+
+        })
 
         pageCopy.keywords.forEach(keyword => {
             const allForms = getAllWordForms(keyword)
@@ -40,12 +59,6 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
         urlWords.forEach(word => {
             if (searchValue.includes(word)) {
                 pageCopy.rank +=5
-            }
-        })
-
-        contentWords.forEach(word => {
-            if (searchValue.includes(word)) {
-                pageCopy.rank++
             }
         })
     })
