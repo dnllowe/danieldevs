@@ -14,6 +14,7 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
         const titleWords = pageCopy.title.split(' ')
         const descriptionWords = pageCopy.description.split(' ')
         const urlWords = pageCopy.url.replace('/', '').split('-')
+        const searchWords = searchValue.split(' ')
 
         pageCopy.content.forEach(c => {
             const headerWords = c.header.split(' ')
@@ -28,20 +29,28 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
 
             contentWords.forEach(word => {
         
-                if (searchValue.includes(word)) {
-                    pageCopy.rank++
-                }
+                searchWords.forEach(searchWord => {
+                    if (searchWord.toLowerCase() === word.toLowerCase()) {
+                        pageCopy.rank++
+                    }
+                })
             })
-
         })
 
         pageCopy.keywords.forEach(keyword => {
-            const allForms = getAllWordForms(keyword)
-            allForms.forEach(kw => {
-                if (searchValue.includes(kw)) {
-                    pageCopy.rank += 5
-                }
+            
+            const eachKeyWord = keyword.split(' ')
+
+            eachKeyWord.forEach(kw => {
+                const allForms = getAllWordForms(kw)
+                allForms.forEach(kw => {
+                    if (searchValue.includes(kw)) {
+                        pageCopy.rank += 5
+                    }
+                })
             })
+            
+            
         })
 
         titleWords.forEach(word => {

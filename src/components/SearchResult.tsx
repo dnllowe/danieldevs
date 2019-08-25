@@ -9,7 +9,7 @@ export default (props: SearchResultProps) => {
     const page = props.page
 
     return (
-        <Link to={'/pages' + page.url}>
+        <Link to={'/pages/' + page.url}>
             <div>
                 <p>{page.title}</p>
                 <p>{page.url}</p>

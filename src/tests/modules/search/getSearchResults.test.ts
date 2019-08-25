@@ -3,7 +3,7 @@ import Page from '../../../pages/Page'
 
 const ReactTestPage: Page = {
     title: 'React Testing',
-    keywords: [ 'react', 'test' ],
+    keywords: [ 'react', 'test', 'react native' ],
     description: 'A page about React and testing.',
     url: '/react-test',
     content: [
@@ -29,7 +29,21 @@ const NodeTestPage: Page = {
     rank: 0
 }
 
-const pages = [ ReactTestPage, NodeTestPage ]
+const ContentMatchPage: Page = {
+    title: 'Content Match',
+    keywords: ['sample', 'page' ],
+    description: 'sample',
+    url: '/sample',
+    content: [
+        {
+            header: 'Overview',
+            content: "This page will match on the word content-match because the word content is in a content section."
+        }
+    ],
+    rank: 0
+}
+
+const pages = [ ReactTestPage, NodeTestPage, ContentMatchPage ]
 it('returns pages matching search phrase', () => {
     const reactPageResults = getSearchResults(pages, 'react')
     const nodePageResults = getSearchResults(pages, 'node')
@@ -39,4 +53,14 @@ it('returns pages matching search phrase', () => {
     expect(nodePageResults[0].title).toEqual(NodeTestPage.title)
     expect(testPageResults[0].title).toEqual(NodeTestPage.title)
     expect(testPageResults[1].title).toEqual(ReactTestPage.title)
+})
+
+it('finds search result if multi-word keyword contains phrase', () => {
+    const reactPageResults = getSearchResults(pages, 'native')
+    expect(reactPageResults[0].title).toEqual(ReactTestPage.title)
+})
+
+it('matches on content, regardless of letter casing', () => {
+    const contentMatchPageResults = getSearchResults(pages, 'content-match')
+    expect(contentMatchPageResults[0].title).toEqual(ContentMatchPage.title)
 })
