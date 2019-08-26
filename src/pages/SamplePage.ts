@@ -1,10 +1,5 @@
 import Page from "./Page"
 
-type PageSection = {
-    header: string
-    content: string
-}
-
 const SamplePage: Page = {
     title: 'Sample Page',
     keywords: ['sample', 'test', 'page', 'code', 'developer', 'run'],

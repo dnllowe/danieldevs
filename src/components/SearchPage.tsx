@@ -11,6 +11,7 @@ export default () => {
 
     return (
         <div>
+            <h1>Daniel Devs...</h1>
             <SearchBar />
             <button onClick={() => { 
                 navigate(`/search?searchQuery=${searchContext.searchValue.replace(/\s+/g, '+')}`)
@@ -20,9 +21,8 @@ export default () => {
             <button>I'm Feeling Lucky</button>
             <Router>
                 <SearchResults path='/search' />
-            </Router>
-            <Router>
                 <Page path='/pages/:page-url' />
+                <Page path='/pages/dotalign/:page-url' />
             </Router>
         </div>
     )

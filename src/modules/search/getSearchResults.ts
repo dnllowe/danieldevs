@@ -21,14 +21,14 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
             const contentWords = c.content.split(' ')
 
             headerWords.forEach(word => {
-            
+                word = word.toLowerCase()
                 if (searchValue.includes(word)) {
                     pageCopy.rank += 3
                 }
             })
 
             contentWords.forEach(word => {
-        
+                word = word.toLowerCase()
                 searchWords.forEach(searchWord => {
                     if (searchWord.toLowerCase() === word.toLowerCase()) {
                         pageCopy.rank++

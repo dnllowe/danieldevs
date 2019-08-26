@@ -7,7 +7,7 @@ type SearchResultProps = {
 }
 export default (props: SearchResultProps) => {
     const page = props.page
-
+    console.log(page.title + ' ' + page.rank)
     return (
         <Link to={'/pages/' + page.url}>
             <div>

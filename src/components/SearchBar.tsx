@@ -31,7 +31,7 @@ export default () => {
             }}
             inputProps={{ 
                 value: searchContext.searchValue,
-                placeholder: 'What would you like to know?',
+                placeholder: 'Search what Daniel can do',
                 onChange: (e: React.FormEvent<HTMLInputElement>) => searchContext.setSearchValue(e.currentTarget.value),
             }}
         />
