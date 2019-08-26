@@ -11,26 +11,30 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
         const pageCopy = Object.assign({}, {...p})
         pagesCopy[i] = pageCopy
 
-        const titleWords = pageCopy.title.split(' ')
-        const descriptionWords = pageCopy.description.split(' ')
+        const title = pageCopy.title.toLowerCase()
+        const description = pageCopy.description.toLowerCase()
+
+        const titleWords = title.split(' ')
+        const descriptionWords = description.split(' ')
         const urlWords = pageCopy.url.replace('/', '').split('-')
         const searchWords = searchValue.split(' ')
 
         pageCopy.content.forEach(c => {
-            const headerWords = c.header.split(' ')
-            const contentWords = c.content.split(' ')
+            const header = c.header.toLowerCase()
+            const content = c.content.toLowerCase()
+
+            const headerWords = header.split(' ')
+            const contentWords = content.split(' ')
 
             headerWords.forEach(word => {
-                word = word.toLowerCase()
                 if (searchValue.includes(word)) {
                     pageCopy.rank += 3
                 }
             })
 
             contentWords.forEach(word => {
-                word = word.toLowerCase()
                 searchWords.forEach(searchWord => {
-                    if (searchWord.toLowerCase() === word.toLowerCase()) {
+                    if (searchWord === word) {
                         pageCopy.rank++
                     }
                 })
@@ -44,7 +48,7 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
             eachKeyWord.forEach(kw => {
                 const allForms = getAllWordForms(kw)
                 allForms.forEach(kw => {
-                    if (searchValue.includes(kw)) {
+                    if (searchValue.includes(kw.toLowerCase())) {
                         pageCopy.rank += 5
                     }
                 })
