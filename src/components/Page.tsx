@@ -12,12 +12,12 @@ const RenderPage = (page: Page) => {
     return (
         <section>
             <h1>{page.title}</h1>
-            <p>{page.description}</p>
             {page.content.map(c => {
                 return (
                     <section key={key++}>
                         <h3>{c.header}</h3>
                         <p>{c.content}</p>
+                        { c.component && c.component(null) }
                     </section>
                 )
             })}

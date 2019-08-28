@@ -3,8 +3,8 @@ import Page from '../Page'
 const DotAlignMergeUsers: Page = {
     title: 'DotAlign Data Retention Policy Support',
     description: "Allows clients to clear data from DotAlign user's databases",
-    keywords: ['sql', 'dotalign'],
-    languages: ['SQL'],
+    keywords: ['sql', 'dotalign', 'work experience', 'backend'],
+    languages: ['sql'],
     url: 'dotalign/retention-policy-support',
     content: [
         {

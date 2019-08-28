@@ -2,10 +2,10 @@ import Page from '../Page'
 
 const DotAlignPortal: Page = {
     title: "DotAlign Portal",
-    keywords: ['dotalign', 'elm', 'ui', 'api', 'rest', 'spa', 'single page application', 'frontend'],
+    keywords: ['dotalign', 'work experience', 'elm', 'ui', 'api', 'rest', 'spa', 'single page application', 'frontend', 'backend', 'full stack','web design'],
     description: "How user's interact with DotAlign's Cloud deployment",
     url: 'dotalign/frontend-portal',
-    languages: ['elm', 'css', 'scss'],
+    languages: ['elm', 'css', 'scss', 'webpack'],
     content: [
         {
             header: "Overview",

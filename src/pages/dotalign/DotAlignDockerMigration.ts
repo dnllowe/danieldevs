@@ -2,10 +2,10 @@ import Page from "../Page"
 
 const DotAlignDockerMigration: Page = {
     title: 'DotAlign Docker Migration',
-    keywords: ['docker', 'dotalign', 'severless', 'containers', 'kubernetes', 'k8s'],
+    keywords: ['docker', 'dotalign', 'work experience', 'severless', 'containers', 'kubernetes', 'k8s', 'backend'],
     description: 'My contributions to porting DotAlign from a native, Windows desktop application to a severless cloud architecture.',
     url: 'dotalign/docker-migration',
-    languages: ['C#', '.NET', 'powershell', 'docker', 'kubectl'],
+    languages: ['c#', '.net', 'powershell', 'docker', 'kubectl'],
     content: [
         {
             header: 'Overview',

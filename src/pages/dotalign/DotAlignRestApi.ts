@@ -3,9 +3,9 @@ import Page from '../Page'
 const DotAlignRestApi: Page = {
     title: 'DotAlign Cloud REST API',
     description: 'DotAlign REST API that provides insights from the severless cloud application',
-    keywords: ['dotalign', 'rest api', 'api', 'rest'],
+    keywords: ['dotalign', 'work experience', 'rest api', 'api', 'rest', 'backend'],
     url: 'dotalign/rest-api',
-    languages: ['C#', '.NET'],
+    languages: ['c#', '.net'],
     content: [
         {
             header: 'Overview',

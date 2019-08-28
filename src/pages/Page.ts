@@ -13,7 +13,8 @@ type PageSection = {
     header: string
     img?: SectionImage
     content: string
-    relatedPages?: RelatedPage[]
+    relatedPages?: RelatedPage[],
+    component?: (props: any) => JSX.Element
 }
 
 type Page = {

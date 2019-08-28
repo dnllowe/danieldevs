@@ -2,9 +2,9 @@ import Page from '../Page'
 
 const DotAlignQuadParser: Page = {
     title: "DotAlign QUAD to Json Parser for REST API",
-    keywords: ['dotalign', 'graph', 'api', 'rest'],
+    keywords: ['dotalign', 'work experience', 'graph', 'api', 'rest', 'backend'],
     description: "Converting QUAD output into REST API friendly Json",
-    languages: ['C#', '.NET'],
+    languages: ['c#', '.net'],
     content: [
         {
             header: "Overview",
@@ -29,6 +29,13 @@ const DotAlignQuadParser: Page = {
             \nParent entities typically don't have references to their children in our data model.
             However, while scanning the QUADs, I have the opportunity to place children in the parent object.
             Any time a child references a parent, the parent also adds the child to an array of that type
+            \nUpdating the ORM
+            \nDotAlign uses an in-house ORM to generate SQL queries for entities in graph format. 
+            We rely on these queries referencing parent objects in a specific way in order to create the
+            proper Json. However, we also wanted to associate objects that may have joined to the parent
+            without having a specific reference. To accomplish this, I updated our ORM-generated queries
+            so that they automatically add references to joined entities. Then, when the SQL output is parsed,
+            it can automatically include the joined entities in the json for the parent object.
             \nFinal output
             \nWhen fetching QUADs into Json, I let the user specify which types of entities they care about. 
             I match their request to the array of objects for that type and return only the data they're interested in.`

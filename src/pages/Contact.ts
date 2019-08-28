@@ -1,0 +1,12 @@
+import Page from './Page'
+
+const Contact: Page = {
+    title: 'Contact Information',
+    description: "You can email me at dnllowe2@gmail.com. If you'd like to speak on the phone, please email first :)",
+    keywords: ['contact', 'email'],
+    url: 'contact',
+    rank: 0,
+    content: []
+}
+
+export default Contact
