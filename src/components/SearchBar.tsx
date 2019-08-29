@@ -6,7 +6,7 @@ import Pages from '../pages'
 import { getSuggestionValue, getSuggestions } from '../modules/search/suggestions'
 
 const renderSuggestion = (suggestion: string) => (
-    <div>
+    <div className='search-suggestion'>
         {suggestion}
     </div>
 )
@@ -26,7 +26,7 @@ export default () => {
             onSuggestionsFetchRequested={({ value }) => setSuggestions(getSuggestions(keywords, value))}
             onSuggestionsClearRequested={() => setSuggestions([])}
             onSuggestionSelected={(e: React.FormEvent<HTMLInputElement>) => { 
-                const suggestion = suggestions[parseInt(e.currentTarget.value)]
+                const suggestion = e.currentTarget.innerText;
                 searchContext.setSearchValue(suggestion)
             }}
             inputProps={{ 

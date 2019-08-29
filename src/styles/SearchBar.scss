@@ -35,6 +35,10 @@
     }
 }
 
+.search-suggestion {
+    list-style-type: none;
+}
+
 .react-autosuggest__input {
     max-width: 582px;
     width: 75%;
@@ -49,4 +53,33 @@
     &:hover {
         @include shadow($exlightgray);
     }
+}
+
+.react-autosuggest__suggestions-container--open {
+    display: block;
+    position: absolute;
+    transform: translateY(-20px);
+    text-align: center;
+    max-width: 582px;
+    width: 75%;
+    margin-left: 1px;
+    background-color: #FFFFFF;
+    border-radius: 0 0 4px 4px;
+    z-index: 2;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+}
+
+.react-autosuggest__suggestions-list {
+    padding: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+    padding: 10px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+    background-color: $exlightgray;
 }
