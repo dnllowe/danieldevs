@@ -1,39 +1,26 @@
-import React, { useContext, useState } from 'react'
-import AutoSuggest from 'react-autosuggest'
+import React, { useContext } from 'react'
 import { SearchContext } from '../context/SearchContext'
-import { getAllKeywords } from '../modules/search/allKeywords'
-import Pages from '../pages'
-import { getSuggestionValue, getSuggestions } from '../modules/search/suggestions'
-
-const renderSuggestion = (suggestion: string) => (
-    <div className='search-suggestion'>
-        {suggestion}
-    </div>
-)
-
-const keywords = getAllKeywords(Pages)
 
 export default () => {
 
     const searchContext = useContext(SearchContext)
-    const [ suggestions, setSuggestions ] = useState<string[]>([])
 
     return (
-        <AutoSuggest
-            suggestions={suggestions}
-            getSuggestionValue={getSuggestionValue}
-            renderSuggestion={renderSuggestion}
-            onSuggestionsFetchRequested={({ value }) => setSuggestions(getSuggestions(keywords, value))}
-            onSuggestionsClearRequested={() => setSuggestions([])}
-            onSuggestionSelected={(e: React.FormEvent<HTMLInputElement>) => { 
-                const suggestion = e.currentTarget.innerText;
-                searchContext.setSearchValue(suggestion)
-            }}
-            inputProps={{ 
-                value: searchContext.searchValue,
-                placeholder: 'Search what Daniel can do',
-                onChange: (e: React.FormEvent<HTMLInputElement>) => searchContext.setSearchValue(e.currentTarget.value),
-            }}
-        />
+        <div className='search-container'>
+            <input 
+                className='search-bar'
+                value={searchContext.searchValue}
+                placeholder={'Search what Daniel can do'}
+                onChange={(e) => { 
+                    searchContext.setSearchValue(e.currentTarget.value)
+
+                    if (e.currentTarget.value) {
+                        searchContext.setShowSuggestions(true)
+                    } else {
+                        searchContext.setShowSuggestions(false)
+                    }
+                }}
+             />
+        </div>
     )
 }

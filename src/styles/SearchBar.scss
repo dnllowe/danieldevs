@@ -11,6 +11,7 @@
     color: coral;
     font-size: 30px;
     display: inline;
+    margin-left: 40px;
 }
 
 .search-bar-container {
@@ -22,6 +23,22 @@
 
     @include medium-and-larger {
         margin-top: 225px;
+    }
+}
+
+.search-bar {
+    max-width: 582px;
+    width: 75%;
+    border-radius: 25px;
+    border-color: $lightgray;
+    border-style: solid;
+    border-width: 1px;
+    padding: 14px;
+    padding-left: 25px;
+    margin-bottom: 20px;
+
+    &:hover {
+        @include shadow($exlightgray);
     }
 }
 
@@ -44,28 +61,19 @@
 
 .search-suggestion {
     list-style-type: none;
-}
-
-.react-autosuggest__input {
-    max-width: 582px;
-    width: 75%;
-    border-radius: 25px;
-    border-color: $lightgray;
-    border-style: solid;
-    border-width: 1px;
-    padding: 14px;
-    padding-left: 25px;
-    margin-bottom: 20px;
+    padding: 10px 10px 10px 20px;
 
     &:hover {
-        @include shadow($exlightgray);
+        background-color: $exlightgray;
     }
 }
 
-.react-autosuggest__suggestions-container--open {
-    display: block;
+.search-suggestions-container {
     position: absolute;
-    transform: translate(50%, -20px);
+    padding-left: 0px;
+    text-align: left;
+    list-style-type: none;
+    transform: translate(50%, -35px);
     right: 50%;
     max-width: 582px;
     width: 75%;
@@ -73,19 +81,4 @@
     border-radius: 0 0 4px 4px;
     z-index: 2;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box;
-}
-
-.react-autosuggest__suggestions-list {
-    padding: 0;
-    text-align: left;
-    list-style-type: none;
-}
-
-.react-autosuggest__suggestion {
-    padding: 10px;
-}
-
-.react-autosuggest__suggestion--highlighted {
-    background-color: $exlightgray;
 }

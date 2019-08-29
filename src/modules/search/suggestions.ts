@@ -10,5 +10,3 @@ export const getSuggestions = (suggestions: string[], input: string) => {
 
     return matchList.sort().slice(0, 5)
 }
-
-export const getSuggestionValue = (suggestion: string) => suggestion
