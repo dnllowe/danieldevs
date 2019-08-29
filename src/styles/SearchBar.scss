@@ -7,6 +7,12 @@
     font-size: 50px;
 }
 
+.search-header-medium {
+    color: coral;
+    font-size: 30px;
+    display: inline;
+}
+
 .search-bar-container {
     text-align: center;
     
@@ -17,8 +23,9 @@
     @include medium-and-larger {
         margin-top: 225px;
     }
+}
 
-    
+.search-bar-container-medium {
 }
 
 .search-button {
@@ -58,11 +65,10 @@
 .react-autosuggest__suggestions-container--open {
     display: block;
     position: absolute;
-    transform: translateY(-20px);
-    text-align: center;
+    transform: translate(50%, -20px);
+    right: 50%;
     max-width: 582px;
     width: 75%;
-    margin-left: 1px;
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
     z-index: 2;

@@ -13,6 +13,14 @@ export const getAllKeywords = (pages: Page[]) => {
                 keywordMap[keyword] = true
             }
         })
+
+        page.technologies && page.technologies.forEach(technology => {
+
+            if (!keywordMap[technology]) {
+                keywords.push(technology)
+                keywordMap[technology] = true
+            }
+        })
     })
 
     return keywords

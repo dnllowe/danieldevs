@@ -1,18 +1,24 @@
 import React, { useContext, useEffect } from 'react'
-import queryString from 'query-string'
 import { getSearchResults } from '../modules/search/getSearchResults'
 import SearchResult from './SearchResult'
 import Pages from '../pages'
 import { SearchContext } from '../context/SearchContext'
 
-type Query = {
-    searchQuery: string
+type Location = {
+    pathname: string
+    href: string
+    origin: string
 }
 
-const SearchResults = (props: { path: string, location?: { search: string }}) => {
+const convertLocationToQuery = (location: Location) => {
+    const query = location.href.slice(location.origin.length + location.pathname.length + 'searchQuery'.length + 2)
+    return query.replace('+', ' ')
+}
+
+const SearchResults = (props: { path: string, location?: Location }) => {
     
     const searchContext = useContext(SearchContext)
-    const { searchQuery } = queryString.parse(props.location ? props.location.search : '') as Query
+    const searchQuery = props.location ? convertLocationToQuery(props.location) : ''
     
     useEffect(() => {
         const fetchedSearchResults = getSearchResults(Pages, searchQuery)

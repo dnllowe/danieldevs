@@ -21,7 +21,7 @@ const DotAlignAzureFunction: Page = {
             content: `Indexing and analyzing email is at the core of what DotAlign does. To accomplish this
             in a cloud setting, I used the Microsoft Graph REST API. First, the web application places a 
             message on the indexing queue. This gets picked up by the indexing microservice. 
-            \nIndexing the most importan items
+            \nIndexing the most important items
             \nIn order to get the most top-of-mind emails in the system first, I took a two-pronged approach. 
             Starting from the time the function begins, it requests a batch of the most recent mail items in 
             the past, and any that may have come in sense the function last ran. I track the newest and oldest 

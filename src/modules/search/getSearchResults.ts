@@ -53,8 +53,12 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
                     }
                 })
             })
-            
-            
+        })
+
+        pageCopy.technologies && pageCopy.technologies.forEach(technology => {
+            if (searchValue.includes(technology.toLowerCase())) {
+                pageCopy.rank += 5
+            }
         })
 
         titleWords.forEach(word => {
