@@ -4,7 +4,7 @@ const DotAlignMergeUsers: Page = {
     title: 'DotAlign Multi Device Multi Username Support',
     description: 'New features that handled multiple user accounts and multiple instances of DotAlign on different devices for the same user to stay in sync.',
     keywords: ['sql', 'migration', 'work experience', 'dotalign', 'backend'],
-    languages: ['sql', 'c#', '.net'],
+    technologies: ['sql', 'c#', '.net'],
     url: 'dotalign/multi-device-and-user-support',
     content: [
         {

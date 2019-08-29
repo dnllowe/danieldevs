@@ -25,7 +25,7 @@ type Page = {
     content: PageSection[]
     rank: number
     yearsOfExperience?: number
-    languages?: string[]
+    technologies?: string[]
 }
 
 export default Page

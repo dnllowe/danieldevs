@@ -4,7 +4,7 @@ const Education: Page = {
     title: 'Education',
     description: 'My educational background',
     keywords: ['education', 'fullstack academy of code', 'bootcamp', 'electron', 'projects'],
-    languages: ['react', 'redux', 'javascript', 'electron', 'node', 'html', 'css', 'scss', 'webpack'],
+    technologies: ['react', 'redux', 'javascript', 'electron', 'node', 'html', 'css', 'scss', 'webpack'],
     url: 'education',
     rank: 0,
     content: [

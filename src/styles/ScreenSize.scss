@@ -1,0 +1,28 @@
+$small: 700px;
+$medium: 800px;
+$large: 900px;
+$exlarge: 1200px;
+
+@mixin above($screen-size) {
+    @media screen and (min-width: $screen-size) {
+        @content;
+    }
+}
+
+@mixin below($screen-size) {
+    @media screen and (max-width: $screen-size) {
+        @content;
+    }
+}
+
+@mixin medium-and-larger() {
+    @include above($medium) {
+        @content;
+    }
+}
+
+@mixin small-screens() {
+    @include below($medium) {
+        @content;
+    }
+}

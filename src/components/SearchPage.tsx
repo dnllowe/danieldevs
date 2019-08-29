@@ -4,6 +4,7 @@ import SearchBar from './SearchBar'
 import { SearchContext } from '../context/SearchContext'
 import SearchResults from './SearchResults'
 import Page from './Page'
+import '../styles/SearchBar.scss'
 
 export default () => {
 
@@ -11,14 +12,18 @@ export default () => {
 
     return (
         <div>
-            <h1>Daniel. Devs.</h1>
-            <SearchBar />
-            <button onClick={() => { 
-                navigate(`/search?searchQuery=${searchContext.searchValue.replace(/\s+/g, '+')}`)
-            }}>
-                Search
-            </button>
-            <button>I'm Feeling Lucky</button>
+            <div className='search-bar-container'>
+                <h1 className='search-header'>Daniel Devs</h1>
+                <SearchBar />
+                <button 
+                    className='search-button'
+                    onClick={() => { 
+                    navigate(`/search?searchQuery=${searchContext.searchValue.replace(/\s+/g, '+')}`)
+                }}>
+                    Search
+                </button>
+                <button className='search-button'>I'm Feeling Lucky</button>
+            </div>
             <Router>
                 <SearchResults path='/search' />
                 <Page path='/pages/:page-url' />

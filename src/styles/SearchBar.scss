@@ -1,0 +1,52 @@
+@import 'Colors.scss';
+@import 'Effects.scss';
+@import 'ScreenSize.scss';
+
+.search-header {
+    color: coral;
+    font-size: 50px;
+}
+
+.search-bar-container {
+    text-align: center;
+    
+    @include small-screens {
+        margin-top: 30%;
+    }
+
+    @include medium-and-larger {
+        margin-top: 250px;
+    }
+
+    
+}
+
+.search-button {
+    border: none;
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid $lightgray;
+        padding: 9px;
+    }
+}
+
+.react-autosuggest__input {
+    max-width: 582px;
+    width: 75%;
+    border-radius: 25px;
+    border-color: $lightgray;
+    border-style: solid;
+    border-width: 1px;
+    padding: 14px;
+    padding-left: 25px;
+    margin-bottom: 20px;
+
+    &:hover {
+        @include shadow($exlightgray);
+    }
+}

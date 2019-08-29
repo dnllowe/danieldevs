@@ -5,7 +5,7 @@ const DotAlignReactWebsite: Page = {
     description: "Redoing the DotAlign website in React",
     keywords: ['react', 'work experience', 'single page application', 'spa', 'dotalign', 'website', 'web design', 'ui', 'frontend'],
     url: 'dotalign/react-website',
-    languages: ['javascript', 'typescript', 'html', 'css', 'scss', '.net', 'react'],
+    technologies: ['javascript', 'typescript', 'html', 'css', 'scss', '.net', 'react'],
     content: [
         {
             header: 'Overview',

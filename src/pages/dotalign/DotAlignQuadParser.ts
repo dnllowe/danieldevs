@@ -4,7 +4,7 @@ const DotAlignQuadParser: Page = {
     title: "DotAlign QUAD to Json Parser for REST API",
     keywords: ['dotalign', 'work experience', 'graph', 'api', 'rest', 'backend'],
     description: "Converting QUAD output into REST API friendly Json",
-    languages: ['c#', '.net'],
+    technologies: ['c#', '.net'],
     content: [
         {
             header: "Overview",

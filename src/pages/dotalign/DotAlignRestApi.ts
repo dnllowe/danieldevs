@@ -5,7 +5,7 @@ const DotAlignRestApi: Page = {
     description: 'DotAlign REST API that provides insights from the severless cloud application',
     keywords: ['dotalign', 'work experience', 'rest api', 'api', 'rest', 'backend'],
     url: 'dotalign/rest-api',
-    languages: ['c#', '.net'],
+    technologies: ['c#', '.net'],
     content: [
         {
             header: 'Overview',

@@ -12,6 +12,12 @@ const RenderPage = (page: Page) => {
     return (
         <section>
             <h1>{page.title}</h1>
+            {page.technologies && 
+                <p>
+                    <strong>Technologies used: </strong>
+                    {page.technologies.join(', ')}
+                </p>
+            }
             {page.content.map(c => {
                 return (
                     <section key={key++}>

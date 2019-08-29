@@ -6,7 +6,10 @@ const Contact: Page = {
     keywords: ['contact', 'email'],
     url: 'contact',
     rank: 0,
-    content: []
+    content: [{
+        header: '',
+        content: "You can email me at dnllowe2@gmail.com. If you'd like to speak on the phone, please email first :)"
+    }]
 }
 
 export default Contact

@@ -5,7 +5,7 @@ const DotAlignAzureFunction: Page = {
     keywords: ['dotalign', 'work experience', 'faas', 'microservice', 'micro service', 'serverless', 'azure functions', 'backend'],
     description: "My contributions to the DotAlign cloud severless / micro service architecture",
     url: 'dotalign/severless-micro-services',
-    languages: ['c#', 'f#', '.net', 'javascript', 'typescript', 'azure functions'],
+    technologies: ['c#', 'f#', '.net', 'javascript', 'typescript', 'azure functions'],
     content: [
         {
             header: 'Overview',

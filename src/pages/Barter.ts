@@ -24,7 +24,7 @@ const Barter: Page = {
         'nosql',
         'projects'
     ],
-    languages: ['typescript', 'cypher', 'javascript', 'graphql', 'react native', 'node', 'neo4j', 'azure functions', 'ajax'],
+    technologies: ['typescript', 'cypher', 'javascript', 'graphql', 'react native', 'node', 'neo4j', 'azure functions', 'ajax'],
     content: [
         {
             header: "Using React Native",

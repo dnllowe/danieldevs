@@ -5,7 +5,7 @@ const DotAlignDockerMigration: Page = {
     keywords: ['docker', 'dotalign', 'work experience', 'severless', 'containers', 'kubernetes', 'k8s', 'backend'],
     description: 'My contributions to porting DotAlign from a native, Windows desktop application to a severless cloud architecture.',
     url: 'dotalign/docker-migration',
-    languages: ['c#', '.net', 'powershell', 'docker', 'kubectl'],
+    technologies: ['c#', '.net', 'powershell', 'docker', 'kubectl'],
     content: [
         {
             header: 'Overview',
