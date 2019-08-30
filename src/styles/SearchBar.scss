@@ -5,13 +5,20 @@
 .search-header {
     color: coral;
     font-size: 50px;
+    margin-bottom: 20px;
 }
 
 .search-header-medium {
     color: coral;
     font-size: 30px;
-    display: inline;
+    margin-bottom: 20px;
+
+    @include medium-and-larger {
+        display: inline;
+    }
+
     margin-right: 20px;
+    text-align: center;
 }
 
 .search-container {
@@ -32,8 +39,20 @@
 
 .search-bar-input {
     max-width: 582px;
-    font-size: 18px;
-    width: 75%;
+
+    @include medium-and-larger {
+        font-size: 18px;
+    }
+    
+    @include small-screens {
+        width: 75%;
+        display: block;
+    }
+
+    @include medium-and-larger {
+        width: 50%;
+    }
+
     border-radius: 25px;
     border-color: $lightgray;
     border-style: solid;
