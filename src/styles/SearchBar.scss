@@ -4,7 +4,15 @@
 
 .search-header {
     color: coral;
-    font-size: 50px;
+
+    @include small-screens {
+        font-size: 30px;
+    }
+
+    @include medium-and-larger {
+        font-size: 50px;
+    }
+
     margin-bottom: 20px;
 }
 
@@ -12,6 +20,11 @@
     color: coral;
     font-size: 30px;
     margin-bottom: 20px;
+
+    @include small-screens {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     @include medium-and-larger {
         display: inline;
@@ -40,13 +53,15 @@
 .search-bar-input {
     max-width: 582px;
 
-    @include medium-and-larger {
-        font-size: 18px;
-    }
-    
     @include small-screens {
         width: 75%;
+        margin-left: auto;
+        margin-right: auto;
         display: block;
+    }
+
+    @include medium-and-larger {
+        font-size: 18px;
     }
 
     @include medium-and-larger {
