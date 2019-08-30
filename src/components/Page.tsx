@@ -10,7 +10,7 @@ const RenderPage = (page: Page) => {
     let key = 0
 
     return (
-        <section>
+        <section className='app-container'>
             <h1>{page.title}</h1>
             {page.technologies && 
                 <p>

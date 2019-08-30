@@ -6,11 +6,9 @@ import SearchPage from './components/SearchPage'
 
 const App: React.FC = () => {
   return (
-    <div className='app-container'>
-      <SearchContextProvider>
-          <SearchPage />
-      </SearchContextProvider>
-    </div>
+    <SearchContextProvider>
+        <SearchPage />
+    </SearchContextProvider>
   )
 }
 

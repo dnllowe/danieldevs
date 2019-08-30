@@ -28,7 +28,7 @@ const SearchResults = (props: { path: string, location?: Location }) => {
     
     
     return (
-        <ul>
+        <ul className='app-container search-results-container'>
             { searchContext.searchResults.map(r => <SearchResult key={r.url} page={r} />) }
         </ul>
     )
