@@ -3,6 +3,7 @@ import { getSearchResults } from '../modules/search/getSearchResults'
 import SearchResult from './SearchResult'
 import Pages from '../pages'
 import { SearchContext } from '../context/SearchContext'
+import { scrollToTop } from '../modules/scroll/scrollToTop'
 
 type Location = {
     pathname: string
@@ -21,9 +22,10 @@ const SearchResults = (props: { path: string, location?: Location }) => {
     const searchQuery = props.location ? convertLocationToQuery(props.location) : ''
     
     useEffect(() => {
+        scrollToTop()
         const fetchedSearchResults = getSearchResults(Pages, searchQuery)
         searchContext.setSearchResults(fetchedSearchResults)
-
+        return () => searchContext.setSearchResults([])
     }, [ searchQuery ])
     
     
