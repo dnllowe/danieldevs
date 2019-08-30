@@ -4,7 +4,7 @@ export const getPagesByUrl = (pages: Page[]) => {
     const pagesByUrl: { [key: string]: Page } = {}
 
     pages.forEach(page => {
-        pagesByUrl['/pages/' + page.url] = page
+        pagesByUrl['/' + page.url] = page
     })
 
     return pagesByUrl

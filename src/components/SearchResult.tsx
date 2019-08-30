@@ -10,7 +10,7 @@ export default (props: SearchResultProps) => {
     const page = props.page
     
     return (
-        <Link to={'/pages/' + page.url} className='search-result'>
+        <Link to={'/' + page.url} className='search-result'>
             <p className='search-result-title'>{page.title}</p>
             <p className='search-result-url'>/{page.url}</p>
             <p className='search-result-description'>{page.description}</p>

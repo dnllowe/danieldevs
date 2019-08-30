@@ -6,9 +6,9 @@ export default () => {
     const searchContext = useContext(SearchContext)
 
     return (
-        <div className='search-container'>
+        <div className='search-bar'>
             <input 
-                className='search-bar'
+                className='search-bar-input'
                 value={searchContext.searchValue}
                 placeholder={'Search what Daniel can do'}
                 onChange={(e) => { 

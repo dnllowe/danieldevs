@@ -8,9 +8,11 @@ export default (props: { path: string }) => {
     const searchContext = useContext(SearchContext)
 
     return (
-        <form className='search-bar-container-medium' onSubmit={(e) => submitSearch(e, searchContext)}>
+        <form className='search-container-medium' onSubmit={(e) => submitSearch(e, searchContext)}>
             <h1 className='search-header-medium'>Daniel Devs</h1>
-            <SearchBar />
+            <div className='search-bar-container-medium'>
+                <SearchBar />
+            </div>
         </form>
     )
 }

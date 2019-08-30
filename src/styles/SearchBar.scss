@@ -12,9 +12,10 @@
     font-size: 30px;
     display: inline;
     margin-left: 40px;
+    margin-right: 20px;
 }
 
-.search-bar-container {
+.search-container {
     text-align: center;
     
     @include small-screens {
@@ -27,7 +28,12 @@
 }
 
 .search-bar {
+    display: inline;
+}
+
+.search-bar-input {
     max-width: 582px;
+    font-size: 18px;
     width: 75%;
     border-radius: 25px;
     border-color: $lightgray;
@@ -43,8 +49,12 @@
 }
 
 .search-bar-container-medium {
+    display: inline;
 }
 
+.search-buttons-container {
+    display: block;
+}
 .search-button {
     border: none;
     background-color: #eeeeee;

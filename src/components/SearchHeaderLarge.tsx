@@ -9,14 +9,17 @@ export default (props: { path: string }) => {
     const searchContext = useContext(SearchContext)
     
     return (
-        <form className='search-bar-container' onSubmit={(e) => submitSearch(e, searchContext)}>
-            <h1 className='search-header'>Daniel Devs</h1>
+        <form className='search-container' onSubmit={(e) => submitSearch(e, searchContext)}>
+            <h1 className='search-header'>Daniel Devs...</h1>
             <SearchBar />
             { searchContext.showSuggestions && <SearchSuggestions /> }
-            <button className='search-button' onClick={(e) => submitSearch(e, searchContext)}>
-                Search
-            </button>
-            <button className='search-button'>I'm Feeling Lucky</button>
+            <div className='search-buttons-container'>
+                <button className='search-button' onClick={(e) => submitSearch(e, searchContext)}>
+                    Search
+                </button>
+                <button className='search-button'>I'm Feeling Lucky</button>
+
+            </div>
         </form>
     )
 }
