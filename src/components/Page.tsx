@@ -3,7 +3,7 @@ import Pages from '../pages'
 import Page from '../pages/Page'
 import { getPagesByUrl } from '../modules/page/getPagesByUrl'
 import { scrollToTop } from '../modules/scroll/scrollToTop'
-import PageNotFound from './PageNotFound';
+import PageNotFound from './PageNotFound'
 
 const pagesByUrl = getPagesByUrl(Pages)
 
@@ -18,6 +18,7 @@ const RenderPage = (page: Page) => {
     return (
         <section className='app-container page-container'>
             <h1 className='page-header'>{page.title}</h1>
+            {page.image && <img src={page.image.url} className={page.image.className} />}
             {page.technologies && 
                 <p className='page-technologies'>
                     <strong>Technologies used: </strong>
@@ -28,6 +29,7 @@ const RenderPage = (page: Page) => {
                 return (
                     <section key={key++}>
                         <h3 className='page-section-header'>{c.header}</h3>
+                        {c.img && <img src={c.img.url} className={c.img.className} />}
                         <p className='page-section-content'>{c.content}</p>
                         { c.component && c.component(null) }
                     </section>

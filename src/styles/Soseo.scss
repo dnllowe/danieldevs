@@ -1,0 +1,9 @@
+@import './ScreenSize.scss';
+
+.soseo-demo {
+    max-width: 600px;
+
+    @include small-screens {
+        display: none;
+    }
+}

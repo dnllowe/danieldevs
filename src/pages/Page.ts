@@ -4,9 +4,10 @@ type RelatedPage = {
 }
 
 type SectionImage = {
-    imgUrl: string
-    imgTitle: string
-    imgCaption: string
+    url: string
+    title?: string
+    caption?: string
+    className?: string
 }
 
 type PageSection = {
@@ -19,6 +20,7 @@ type PageSection = {
 
 type Page = {
     title: string
+    image?: SectionImage
     keywords: string[]
     description: string
     url: string

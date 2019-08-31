@@ -13,7 +13,11 @@ const SOSeo: Page = {
             content: `SOSeo analyzes content written in its editor to ensure the content follows
             search engine optimization best practices. It scans the text for keyword density, use of images,
             and specific html tags. After scanning a page, it provides a score with recommendations for improvement.
-            The site is live and used daily.`
+            The site is live and used daily.`,
+            img: {
+                url: 'soseo.gif',
+                className: 'soseo-demo'
+            }
         },
         {
             header: 'Frontend (React + Redux)',

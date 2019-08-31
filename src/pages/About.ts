@@ -7,6 +7,10 @@ const timeProgrammingProfessionally = getYearsBetween(new Date(2017, 8, 1), now)
 
 const About: Page = {
     title: 'About me',
+    image: {
+        url: 'me-sm.jpg',
+        className: 'profile-picture'
+    },
     keywords: [
         'about',
         'summary',
