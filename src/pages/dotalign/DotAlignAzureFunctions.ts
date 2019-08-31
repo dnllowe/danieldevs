@@ -6,6 +6,10 @@ const DotAlignAzureFunction: Page = {
     description: "My contributions to the DotAlign cloud severless / micro service architecture",
     url: 'dotalign/severless-micro-services',
     technologies: ['c#', 'f#', '.net', 'javascript', 'typescript', 'azure functions'],
+    image: {
+        url: '/azure-functions.jpg',
+        className: 'azure-functions-img'
+    },
     content: [
         {
             header: 'Overview',
