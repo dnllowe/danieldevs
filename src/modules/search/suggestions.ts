@@ -1,10 +1,16 @@
 export const getSuggestions = (suggestions: string[], input: string) => {
     
+    if (!input.length) {
+        return []
+    }
+
+    input = input.toLowerCase()
+
     const matchList = suggestions.filter(sug => {
         if (sug.length > input.length) {
-            return sug.includes(input)
+            return sug.toLowerCase().includes(input)
         } else {
-            return input.includes(sug)
+            return input.includes(sug.toLowerCase())
         }
     })
 

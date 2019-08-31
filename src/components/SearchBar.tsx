@@ -4,7 +4,7 @@ import { SearchContext } from '../context/SearchContext'
 export default () => {
 
     const searchContext = useContext(SearchContext)
-
+    
     return (
         <div className='search-bar'>
             <input 
@@ -12,9 +12,11 @@ export default () => {
                 value={searchContext.searchValue}
                 placeholder={'Search what Daniel can do'}
                 onChange={(e) => { 
-                    searchContext.setSearchValue(e.currentTarget.value)
+                    
+                    const searchValue = e.currentTarget.value
+                    searchContext.setSearchValue(searchValue)
 
-                    if (e.currentTarget.value) {
+                    if (searchValue) {
                         searchContext.setShowSuggestions(true)
                     } else {
                         searchContext.setShowSuggestions(false)

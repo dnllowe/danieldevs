@@ -46,6 +46,16 @@
     }
 }
 
+.search-container-exit {
+    transform: translateY(-100%);
+    transition: transform 0.35s;
+}
+
+.search-container-enter {
+    transform: translateY(0%);
+    transition: transform 0.5s;
+}
+
 .search-container-medium {
     box-shadow: 0px 1px 8px -1px lightgray;
     padding: 50px 15% 20px 15%;
