@@ -3,6 +3,7 @@ import SearchBar from './SearchBar'
 import { SearchContext } from '../context/SearchContext'
 import { submitSearch } from '../modules/search/submitSearch'
 import SearchSuggestions from './SearchSuggestions'
+import { goToRandomPage } from '../modules/search/goToRandomPage'
 
 export default (props: { path: string }) => {
     
@@ -17,7 +18,9 @@ export default (props: { path: string }) => {
                 <button className='search-button' onClick={(e) => submitSearch(e, searchContext)}>
                     Search
                 </button>
-                <button className='search-button'>I'm Feeling Lucky</button>
+                <button className='search-button' onClick={(e) => goToRandomPage(e, searchContext)}>
+                    I'm Feeling Lucky
+                </button>
 
             </div>
         </form>
