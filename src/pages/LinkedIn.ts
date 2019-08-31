@@ -5,7 +5,10 @@ const LinkedIn: Page = {
     description: 'Check out my LinkedIn page at https://www.linkedin/com/in/dnllowe',
     keywords: ['linkedin'],
     rank: 0,
-    content: [],
+    content: [{
+        header: '',
+        content: 'Check out my LinkedIn page at https://www.linkedin/com/in/dnllowe'
+    }],
     url: 'linkedin'
 }
 

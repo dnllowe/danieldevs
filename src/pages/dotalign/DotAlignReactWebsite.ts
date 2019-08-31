@@ -11,7 +11,11 @@ const DotAlignReactWebsite: Page = {
             header: 'Overview',
             content: `Leadership was worried that the DotAlign website didn't
             do enough to illustrate the features and benefits of the product. I was asked to 
-            bring the features to life and give the site a facelift.`
+            bring the features to life and give the site a facelift.`,
+            img: {
+                url: '/dotalign-site.gif',
+                className: 'dotalign-site-demo'
+            }
         },
         {
             header: 'From Razor to React',
