@@ -4,8 +4,13 @@
 @import './ScreenSize.scss';
 @import './SearchBar.scss';
 @import './SearchResult.scss';
+@import './Page.scss';
 
 * {
     margin: 0px;
     padding: 0px;
+}
+
+a {
+    text-decoration: none;
 }

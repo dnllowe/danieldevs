@@ -3,6 +3,7 @@ import Pages from '../pages'
 import Page from '../pages/Page'
 import { getPagesByUrl } from '../modules/page/getPagesByUrl'
 import { scrollToTop } from '../modules/scroll/scrollToTop'
+import PageNotFound from './PageNotFound';
 
 const pagesByUrl = getPagesByUrl(Pages)
 
@@ -15,19 +16,19 @@ const RenderPage = (page: Page) => {
     })
 
     return (
-        <section className='app-container'>
-            <h1>{page.title}</h1>
+        <section className='app-container page-container'>
+            <h1 className='page-header'>{page.title}</h1>
             {page.technologies && 
-                <p>
+                <p className='page-technologies'>
                     <strong>Technologies used: </strong>
-                    {page.technologies.join(', ')}
+                    {page.technologies.sort().join(', ')}
                 </p>
             }
             {page.content.map(c => {
                 return (
                     <section key={key++}>
-                        <h3>{c.header}</h3>
-                        <p>{c.content}</p>
+                        <h3 className='page-section-header'>{c.header}</h3>
+                        <p className='page-section-content'>{c.content}</p>
                         { c.component && c.component(null) }
                     </section>
                 )
@@ -37,9 +38,13 @@ const RenderPage = (page: Page) => {
 }
 
 export default (props: { path: string, uri?: string }) => {
+
+    const page = props.uri && pagesByUrl[props.uri]
+
     return (
         <article>
-            { props.uri && RenderPage(pagesByUrl[props.uri])}
+            { page && RenderPage(page)}
+            {!page && <PageNotFound />}
         </article>
     )
 }

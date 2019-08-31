@@ -13,10 +13,12 @@ export default () => {
         <div>
             <Router>
                 <SearchHeaderLarge path='/' />
-                <SearchHeaderMedium path='/search' />
-                
                 <Page path='/:page-url' />
                 <Page path='/dotalign/:page-url' />
+            </Router>
+            <Router>
+                <SearchHeaderMedium path='/:page-url' />
+                <SearchHeaderMedium path='/dotalign/:page-url' />
             </Router>
             <Router>
                 <SearchResults path='/search' />

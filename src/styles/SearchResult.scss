@@ -1,5 +1,7 @@
+@import './Colors.scss';
+
 .search-results-container {
-    margin-top: 150px;
+    margin-top: 125px;
 }
 
 .search-result {
@@ -10,19 +12,24 @@
 .search-result-title {
     font-size: 25px;
     margin-top: 30px;
+    color: #1a0dab;
 }
 
 .search-result-description {
     font-size: 16px;
     margin: 0px;
+    color: $gray;
+
 }
 
 .search-result-url {
-    font-size: 12px;
+    font-size: 15px;
     margin: 5px 0px 10px 0px;
+    color: #006621;
 }
 
 .search-result-technologies {
     font-size: 12px;
     margin-top: 5px;
+    color: $darkgray;
 }

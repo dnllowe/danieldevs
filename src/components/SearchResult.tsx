@@ -14,7 +14,7 @@ export default (props: SearchResultProps) => {
             <p className='search-result-title'>{page.title}</p>
             <p className='search-result-url'>/{page.url}</p>
             <p className='search-result-description'>{page.description}</p>
-            { props.page.technologies && <p className='search-result-technologies'>{props.page.technologies.join(', ')}</p> }
+            { props.page.technologies && <p className='search-result-technologies'><strong>{props.page.technologies.sort().join(', ')}</strong></p> }
         </Link>
     )
 }

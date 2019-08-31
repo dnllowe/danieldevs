@@ -1,0 +1,29 @@
+@import './Colors.scss';
+
+.page-container {
+    margin-top: 200px;
+    color: $gray;
+}
+
+.page-header {
+    font-size: 45px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+    color: $exdarkgray;
+}
+
+.page-section-header {
+    font-weight: lighter;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.page-section-content {
+    margin-bottom: 50px;
+    line-height: 1.75;
+}
+
+.page-technologies {
+    margin-bottom: 30px;
+}
