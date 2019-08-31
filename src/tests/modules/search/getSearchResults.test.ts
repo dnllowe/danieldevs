@@ -45,6 +45,20 @@ const ContentMatchPage: Page = {
     rank: 0
 }
 
+const PunctuationTestPage: Page = {
+    title: 'Punctuation-Testing',
+    keywords: ['punctuation!', 'test' ],
+    description: 'Punctuation!',
+    url: '/',
+    content: [
+        {
+            header: 'Overview',
+            content: `.,@!$%^&*(punctuation)<>/?;:'"'\`][{}=_~|\\/]`
+        }
+    ],
+    rank: 0
+}
+
 const pages = [ ReactTestPage, NodeTestPage, ContentMatchPage ]
 it('returns pages matching search phrase', () => {
     const reactPageResults = getSearchResults(pages, 'react')
@@ -84,4 +98,10 @@ it('does not match on irrelevant keywords', () => {
     const actual = getSearchResults([ ContactInfo, DockerMigration ], 'contact')
     expect(actual[0].title).toEqual(ContactInfo.title)
     expect(actual.length).toEqual(1)
+})
+
+it('ignores punctuation', () => {
+    debugger
+    const actual = getSearchResults([ PunctuationTestPage ], 'punctuation')
+    expect(actual[0].title).toEqual(PunctuationTestPage.title)
 })

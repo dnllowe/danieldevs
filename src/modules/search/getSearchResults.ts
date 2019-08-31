@@ -10,6 +10,14 @@ const createSearchMap = (searchValue: string) => {
 
     return searchMap
 }
+
+const getTestableWords = (words: string) => {
+    return words
+        .toLowerCase()
+        .replace(/\.|\,|\`|\~|\!|\@|\$|\%|\^|\&|\*|\(|\)|\_|\=|\}|\]|\{|\[|\"|\'|\:|\;|\/|\?|\>|\<|\||\\/gi, ' ')
+        .trim()
+}
+
 export const getSearchResults = (pages: Page[], searchValue: string) => {
     
     searchValue = searchValue.trim()
@@ -25,16 +33,17 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
         const pageCopy = Object.assign({}, {...p})
         pagesCopy[i] = pageCopy
 
-        const title = pageCopy.title.toLowerCase()
-        const description = pageCopy.description.toLowerCase()
+        const title = getTestableWords(pageCopy.title)
+        const description = getTestableWords(pageCopy.description)
 
         const titleWords = title.length ? title.split(' ') : []
         const descriptionWords = description.length ? description.split(' ') : []
         const urlWords = pageCopy.url.replace('/', '').split('-')
 
         pageCopy.content.forEach(c => {
-            const header = c.header.toLowerCase()
-            const content = c.content.toLowerCase()
+
+            const header = getTestableWords(c.header)
+            const content = getTestableWords(c.content)
 
             const headerWords = header.length ? header.split(' ') : []
             const contentWords = content.length ? content.split(' ') : []
