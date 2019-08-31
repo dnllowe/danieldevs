@@ -16,7 +16,7 @@ const SOSeo: Page = {
             The site is live and used daily.`,
             img: {
                 url: 'soseo.gif',
-                className: 'soseo-demo'
+                className: 'demo-gif'
             }
         },
         {
