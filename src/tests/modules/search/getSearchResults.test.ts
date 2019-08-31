@@ -1,5 +1,6 @@
 import { getSearchResults } from '../../../modules/search/getSearchResults'
 import Page from '../../../pages/Page'
+import ContactInfo from '../../../pages/Contact'
 
 const ReactTestPage: Page = {
     title: 'React Testing',
@@ -63,4 +64,17 @@ it('finds search result if multi-word keyword contains phrase', () => {
 it('matches on content, regardless of letter casing', () => {
     const contentMatchPageResults = getSearchResults(pages, 'content-match')
     expect(contentMatchPageResults[0].title).toEqual(ContentMatchPage.title)
+})
+
+it('does not match on partial words', () => {
+    debugger
+    const actual = getSearchResults([ ContactInfo ], 'r')
+    expect(actual).toEqual([])
+})
+
+it('does not match on no input or white space', () => {
+    const noInput = getSearchResults([ ContactInfo ], '')
+    const whiteSpace = getSearchResults([ ContactInfo ], ' ')
+    expect(noInput).toEqual([])
+    expect(whiteSpace).toEqual([])
 })

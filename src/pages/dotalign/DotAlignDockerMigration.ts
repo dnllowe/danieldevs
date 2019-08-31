@@ -18,7 +18,7 @@ const DotAlignDockerMigration: Page = {
             But this model had limitions. Different versions of Outlook, Windows, and PC hardware versions led to unexpected bugs.
             User encountered performance issues when the plugin ran in their Outlook pane.
             Deploying required manual installation on each user's device, which made rolling out to large teams an obstacle.
-            Shortly after I began working at DotAlign, we made the decision to move a cloud-based model, and I led the migration to a severless Docker container architecture.
+            Shortly after I began working at DotAlign, we made the decision to move to a cloud-based model, and I led the migration to a severless Docker container architecture.
             These are my specific contributions.`
         },
         {

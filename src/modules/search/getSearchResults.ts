@@ -3,6 +3,10 @@ import Page from '../../pages/Page'
 
 export const getSearchResults = (pages: Page[], searchValue: string) => {
     
+    searchValue = searchValue.trim()
+
+    if (searchValue === '') { return []}
+
     searchValue = searchValue.toLowerCase()
     const pagesCopy = [...pages]
 
@@ -14,8 +18,8 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
         const title = pageCopy.title.toLowerCase()
         const description = pageCopy.description.toLowerCase()
 
-        const titleWords = title.split(' ')
-        const descriptionWords = description.split(' ')
+        const titleWords = title.length ? title.split(' ') : []
+        const descriptionWords = description.length ? description.split(' ') : []
         const urlWords = pageCopy.url.replace('/', '').split('-')
         const searchWords = searchValue.split(' ')
 
@@ -23,8 +27,8 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
             const header = c.header.toLowerCase()
             const content = c.content.toLowerCase()
 
-            const headerWords = header.split(' ')
-            const contentWords = content.split(' ')
+            const headerWords = header.length ? header.split(' ') : []
+            const contentWords = content.length ? content.split(' ') : []
 
             headerWords.forEach(word => {
                 if (searchValue.includes(word)) {
