@@ -1,6 +1,7 @@
 import { getSearchResults } from '../../../modules/search/getSearchResults'
 import Page from '../../../pages/Page'
 import ContactInfo from '../../../pages/Contact'
+import DockerMigration from '../../../pages/dotalign/DotAlignDockerMigration'
 
 const ReactTestPage: Page = {
     title: 'React Testing',
@@ -67,7 +68,6 @@ it('matches on content, regardless of letter casing', () => {
 })
 
 it('does not match on partial words', () => {
-    debugger
     const actual = getSearchResults([ ContactInfo ], 'r')
     expect(actual).toEqual([])
 })
@@ -77,4 +77,11 @@ it('does not match on no input or white space', () => {
     const whiteSpace = getSearchResults([ ContactInfo ], ' ')
     expect(noInput).toEqual([])
     expect(whiteSpace).toEqual([])
+})
+
+it('does not match on irrelevant keywords', () => {
+    debugger
+    const actual = getSearchResults([ ContactInfo, DockerMigration ], 'contact')
+    expect(actual[0].title).toEqual(ContactInfo.title)
+    expect(actual.length).toEqual(1)
 })
