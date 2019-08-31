@@ -1,5 +1,5 @@
 import React from 'react'
 
 export default () => (
-    <h1>Oops. I couldn't find that page...</h1>
+    <h1 className='page-header app-container page-container'>Oops. I couldn't find that page...</h1>
 )

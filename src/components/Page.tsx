@@ -39,12 +39,14 @@ const RenderPage = (page: Page) => {
 
 export default (props: { path: string, uri?: string }) => {
 
+    console.log(props.uri)
     const page = props.uri && pagesByUrl[props.uri]
+    const pageNotFound = props.uri && !props.uri.startsWith('/search') && !page
 
     return (
         <article>
             { page && RenderPage(page)}
-            {!page && <PageNotFound />}
+            { pageNotFound && <PageNotFound />}
         </article>
     )
 }
