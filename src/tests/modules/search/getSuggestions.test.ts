@@ -32,3 +32,11 @@ it('returns keywords as long as a substring matches input', () => {
 
     expect(actual).toEqual(expected)
 })
+
+it('ignores letter casing', () => {
+
+    const actual = getSuggestions(keywords, 'React')
+    const expected = [ 'react' ]
+
+    expect(actual).toEqual(expected)
+})
