@@ -6,6 +6,10 @@ const DotAlignDockerMigration: Page = {
     description: 'My contributions to porting DotAlign from a native, Windows desktop application to a severless cloud architecture.',
     url: 'dotalign/docker-migration',
     technologies: ['c#', '.net', 'powershell', 'docker', 'kubectl'],
+    image: {
+        url: '/docker.png',
+        className: 'docker-img'
+    },
     content: [
         {
             header: 'Overview',
