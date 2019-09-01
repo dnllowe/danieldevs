@@ -1,4 +1,4 @@
-import Page from './Page'
+import { Page } from './Page'
 import ResumeView from '../components/Resume'
 
 const Resume: Page = {

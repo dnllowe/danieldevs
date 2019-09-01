@@ -1,5 +1,5 @@
 import { getAllKeywords } from '../../../modules/search/allKeywords'
-import Page from '../../../pages/Page'
+import { Page } from '../../../pages/Page'
 
 const TestPageOne: Page = {
     title: 'Sample Page',

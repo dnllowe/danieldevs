@@ -1,4 +1,4 @@
-import Page from './Page'
+import { Page } from './Page'
 
 const Education: Page = {
     title: 'Education',
@@ -6,6 +6,7 @@ const Education: Page = {
     keywords: ['education', 'fullstack academy of code', 'bootcamp', 'electron', 'projects'],
     technologies: ['react', 'redux', 'javascript', 'electron', 'node', 'html', 'css', 'scss', 'webpack'],
     url: 'education',
+    projectDates: '2017',
     rank: 0,
     content: [
         {

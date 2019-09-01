@@ -4,7 +4,7 @@ import SearchResult from './SearchResult'
 import Pages from '../pages'
 import { SearchContext } from '../context/SearchContext'
 import { scrollToTop } from '../modules/scroll/scrollToTop'
-import Page from '../pages/Page'
+import { Page } from '../pages/Page'
 
 type Location = {
     pathname: string

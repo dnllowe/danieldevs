@@ -1,4 +1,4 @@
-import Page from "../Page"
+import { Page } from '../Page'
 
 const DotAlignDockerMigration: Page = {
     title: 'DotAlign Docker Migration',
@@ -10,6 +10,7 @@ const DotAlignDockerMigration: Page = {
         url: '/docker.png',
         className: 'docker-img'
     },
+    projectDates: '2018',
     content: [
         {
             header: 'Overview',

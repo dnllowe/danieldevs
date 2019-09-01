@@ -1,4 +1,4 @@
-import Page from '../Page'
+import { Page } from '../Page'
 
 const DotAlignMergeUsers: Page = {
     title: 'DotAlign Data Retention Policy Support',
@@ -6,6 +6,7 @@ const DotAlignMergeUsers: Page = {
     keywords: ['sql', 'dotalign', 'work experience', 'backend'],
     technologies: ['sql'],
     url: 'dotalign/retention-policy-support',
+    projectDates: '2017',
     content: [
         {
             header: 'Overview',

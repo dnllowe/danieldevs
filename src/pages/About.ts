@@ -1,4 +1,4 @@
-import Page from './Page'
+import { Page } from './Page'
 import { getYearsBetween } from '../modules/time/getYearsBetween'
 
 const now = new Date(Date.now())

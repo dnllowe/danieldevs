@@ -1,5 +1,5 @@
 import { getSearchResults } from '../../../modules/search/getSearchResults'
-import Page from '../../../pages/Page'
+import { Page } from '../../../pages/Page'
 import ContactInfo from '../../../pages/Contact'
 import DockerMigration from '../../../pages/dotalign/DotAlignDockerMigration'
 

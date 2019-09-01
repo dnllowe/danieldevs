@@ -1,4 +1,4 @@
-import Page from '../Page'
+import { Page } from '../Page'
 
 const DotAlignAzureFunction: Page = {
     title: 'DotAlign Azure Function Microservices',
@@ -10,6 +10,7 @@ const DotAlignAzureFunction: Page = {
         url: '/azure-functions.jpg',
         className: 'azure-functions-img'
     },
+    projectDates: '2019',
     content: [
         {
             header: 'Overview',

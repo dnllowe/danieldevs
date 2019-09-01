@@ -1,5 +1,5 @@
 import { getAllWordForms } from './getAllWordForms'
-import Page from '../../pages/Page'
+import { Page } from '../../pages/Page'
 
 const createSearchMap = (searchValue: string) => {
     const searchMap: { [key: string]: string } = {}
@@ -14,7 +14,7 @@ const createSearchMap = (searchValue: string) => {
 const getTestableWords = (words: string) => {
     return words
         .toLowerCase()
-        .replace(/\.|\,|\`|\~|\!|\@|\$|\%|\^|\&|\*|\(|\)|\_|\=|\}|\]|\{|\[|\"|\'|\:|\;|\/|\?|\>|\<|\||\\/gi, ' ')
+        .replace(/\.|,|`|~|!|@|\$|%|\^|&|\*|\(|\)|_|=|\}|\]|\{|\[|"|'|:|;|\/|\?|>|<|\||\\/gi, ' ')
         .trim()
 }
 

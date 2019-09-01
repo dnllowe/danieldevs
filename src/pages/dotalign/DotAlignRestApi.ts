@@ -1,4 +1,4 @@
-import Page from '../Page'
+import { Page } from '../Page'
 
 const DotAlignRestApi: Page = {
     title: 'DotAlign Cloud REST API',
@@ -6,6 +6,7 @@ const DotAlignRestApi: Page = {
     keywords: ['dotalign', 'work experience', 'rest api', 'api', 'rest', 'backend'],
     url: 'dotalign/rest-api',
     technologies: ['c#', '.net'],
+    projectDates: '2018-2019',
     content: [
         {
             header: 'Overview',

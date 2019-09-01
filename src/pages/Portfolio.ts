@@ -1,4 +1,4 @@
-import Page from './Page'
+import { Page } from './Page'
 import OnlinePortfolio from '../components/Portfolio'
 
 const Portfolio: Page = {
@@ -7,6 +7,7 @@ const Portfolio: Page = {
     keywords: ['portfolio', 'resume', 'projects', 'skills'],
     url: 'online-portfolio',
     rank: 0,
+    projectDates: '2019',
     content: [{
         header: '',
         content: '',

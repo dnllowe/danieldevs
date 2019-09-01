@@ -1,4 +1,4 @@
-import Page from '../Page'
+import { Page } from '../Page'
 
 const DotAlignMergeUsers: Page = {
     title: 'DotAlign Multi Device Multi Username Support',
@@ -6,6 +6,7 @@ const DotAlignMergeUsers: Page = {
     keywords: ['sql', 'migration', 'work experience', 'dotalign', 'backend'],
     technologies: ['sql', 'c#', '.net'],
     url: 'dotalign/multi-device-and-user-support',
+    projectDates: '2017',
     content: [
         {
             header: 'Overview',

@@ -1,26 +1,37 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { SearchContext } from '../context/SearchContext'
 import { getAllKeywords } from '../modules/search/allKeywords'
 import Pages from '../pages'
 import { getSuggestions } from '../modules/search/suggestions'
+import { SearchSuggestionsContext } from '../context/SearchSuggestionsContext'
+import navigateToSearch from '../modules/search/navigateToSearch'
 
 const keywords = getAllKeywords(Pages)
 
 export default () => {
 
     const searchContext = useContext(SearchContext)
-    const suggestions = getSuggestions(keywords, searchContext.searchValue)
+    const searchSuggestionsContext = useContext(SearchSuggestionsContext)
+
+    useEffect(() => {
+        const suggestions = getSuggestions(keywords, searchContext.searchValue)
+        searchSuggestionsContext.setSuggestions(suggestions)
+    }, [ searchContext.searchValue ])
+
+    const suggestions = searchSuggestionsContext.suggestions
+    const selectedSuggestion = searchSuggestionsContext.getSelectedSuggestion()
 
     return (
         <ul className='search-suggestions-area'>
             {suggestions.map(suggestion => {
                 return (
                     <li
-                        className='search-suggestion'
+                        className={`search-suggestion ${suggestion === selectedSuggestion && 'search-suggestion-selected'}`}
                         key={suggestion}
-                        onClick={() => { 
+                        onClick={(e) => { 
                             searchContext.setSearchValue(suggestion)
                             searchContext.setShowSuggestions(false)
+                            navigateToSearch(suggestion)
                         }}
                     >
                         {suggestion}

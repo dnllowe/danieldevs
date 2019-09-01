@@ -1,8 +1,9 @@
-import Page from './Page'
+import { Page } from './Page'
 
 const Barter: Page = {
     title: 'Barter React Native Trading Application',
     description: "React Native + Azure Function mobile application that lets users trade items with each other.",
+    projectDates: '2019',
     keywords: [
         'react native', 
         'graphql', 

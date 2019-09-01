@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import Page from '../pages/Page'
+import { Page } from '../pages/Page'
 import '../styles/SearchResult.scss'
 
 type SearchResultProps = {
@@ -14,7 +14,8 @@ export default (props: SearchResultProps) => {
             <p className='search-result-title'>{page.title}</p>
             <p className='search-result-url'>/{page.url}</p>
             <p className='search-result-description'>{page.description}</p>
-            { props.page.technologies && <p className='search-result-technologies'><strong>{props.page.technologies.sort().join(', ')}</strong></p> }
+            { page.technologies && <p className='search-result-technologies'><strong>{page.technologies.sort().join(', ')}</strong></p> }
+            { page.projectDates && <p className='search-result-dates'><strong>project date: {page.projectDates}</strong></p> }
         </Link>
     )
 }

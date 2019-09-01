@@ -1,10 +1,11 @@
-import Page from '../Page'
+import { Page } from '../Page'
 
 const DotAlignQuadParser: Page = {
     title: "DotAlign QUAD to Json Parser for REST API",
     keywords: ['dotalign', 'work experience', 'graph', 'api', 'rest', 'backend'],
     description: "Converting QUAD output into REST API friendly Json",
     technologies: ['c#', '.net'],
+    projectDates: '2019',
     content: [
         {
             header: "Overview",

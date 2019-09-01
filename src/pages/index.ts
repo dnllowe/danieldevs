@@ -1,4 +1,3 @@
-import Projects from './Projects'
 import About from './About'
 import DotAlignPages from './dotalign'
 import SOSeo from './SOSeo'
@@ -8,9 +7,9 @@ import LinkedIn from './LinkedIn'
 import Education from './Education'
 import Resume from './Resume'
 import Portfolio from './Portfolio'
+import GitHub from './GitHub'
 
 export default [ 
-    Projects,
     About,
     ...DotAlignPages,
     SOSeo,
@@ -19,5 +18,6 @@ export default [
     LinkedIn,
     Education,
     Resume,
-    Portfolio
+    Portfolio,
+    GitHub
 ]

@@ -1,6 +1,7 @@
-type RelatedPage = {
+export type RelatedPage = {
     text: string
     url: string
+    external: boolean
 }
 
 type SectionImage = {
@@ -18,7 +19,7 @@ type PageSection = {
     component?: (props: any) => JSX.Element
 }
 
-type Page = {
+export type Page = {
     title: string
     image?: SectionImage
     keywords: string[]
@@ -26,8 +27,6 @@ type Page = {
     url: string
     content: PageSection[]
     rank: number
-    yearsOfExperience?: number
+    projectDates?: string
     technologies?: string[]
 }
-
-export default Page

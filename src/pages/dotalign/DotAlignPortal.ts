@@ -1,4 +1,4 @@
-import Page from '../Page'
+import { Page } from '../Page'
 
 const DotAlignPortal: Page = {
     title: "DotAlign Portal",
@@ -6,6 +6,7 @@ const DotAlignPortal: Page = {
     description: "How user's interact with DotAlign's Cloud deployment",
     url: 'dotalign/frontend-portal',
     technologies: ['elm', 'css', 'scss', 'webpack'],
+    projectDates: '2019',
     content: [
         {
             header: "Overview",

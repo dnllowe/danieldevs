@@ -1,5 +1,5 @@
 import React, { useState, createContext, useMemo } from 'react'
-import Page from '../pages/Page'
+import { Page } from '../pages/Page'
 
 export type SearchContext = {
     searchValue: string
@@ -25,10 +25,14 @@ const SearchContextProvider = (props: any) => {
     const [ searchResults, setSearchResults ] = useState<Page[]>([])
     const [ showSuggestions, setShowSuggestions ] = useState(false)
     
+    const setSearchValueWithLogging = (value: string) => {
+        console.log("Setting search value: " + value)
+        setSearchValue(value)
+    }
     const searchContextProvider = useMemo<SearchContext>(() => {
         return { 
             searchValue, 
-            setSearchValue, 
+            setSearchValue: setSearchValueWithLogging, 
             searchResults, 
             setSearchResults, 
             showSuggestions, 
