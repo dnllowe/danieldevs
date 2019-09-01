@@ -24,15 +24,11 @@ const SearchContextProvider = (props: any) => {
     const [ searchValue, setSearchValue ] = useState('')
     const [ searchResults, setSearchResults ] = useState<Page[]>([])
     const [ showSuggestions, setShowSuggestions ] = useState(false)
-    
-    const setSearchValueWithLogging = (value: string) => {
-        console.log("Setting search value: " + value)
-        setSearchValue(value)
-    }
+
     const searchContextProvider = useMemo<SearchContext>(() => {
         return { 
             searchValue, 
-            setSearchValue: setSearchValueWithLogging, 
+            setSearchValue: setSearchValue, 
             searchResults, 
             setSearchResults, 
             showSuggestions, 

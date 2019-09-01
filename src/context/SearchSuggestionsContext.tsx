@@ -26,7 +26,6 @@ const SearchSuggestionsContextProvider = (props: any) => {
     const increaseSelection = () => {
 
         if (!suggestions.length) {
-            console.log(-1)
             setSelection(-1)
         } else {
             let newSelection = selection + 1
@@ -35,7 +34,6 @@ const SearchSuggestionsContextProvider = (props: any) => {
                 newSelection = suggestions.length - 1
             }
 
-            console.log(newSelection)
             setSelection(newSelection)
         }
     }
@@ -44,7 +42,6 @@ const SearchSuggestionsContextProvider = (props: any) => {
 
         if (!suggestions.length) {
             setSelection(-1)
-            console.log(-1)
         } else {
 
             let newSelection = selection - 1
@@ -53,13 +50,11 @@ const SearchSuggestionsContextProvider = (props: any) => {
                 newSelection = 0
             }
     
-            console.log(newSelection)
             setSelection(newSelection)
         }
     }
 
     const getSelectedSuggestion = () => {
-        console.log(suggestions[selection])
         return suggestions[selection]
     }
 
