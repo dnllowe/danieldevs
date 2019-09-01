@@ -1,11 +1,16 @@
 import { getAllWordForms } from './getAllWordForms'
 import { Page } from '../../pages/Page'
+import { similarConcepts } from './similarConcepts'
 
 const createSearchMap = (searchValue: string) => {
     const searchMap: { [key: string]: string } = {}
 
     searchValue.split(' ').forEach(word => {
         searchMap[word] = word
+
+        if (similarConcepts[word]) {
+            searchMap[similarConcepts[word]] = similarConcepts[word]
+        }
     })
 
     return searchMap

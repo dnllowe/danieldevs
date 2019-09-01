@@ -3,7 +3,7 @@ import { Page } from '../Page'
 const DotAlignReactWebsite: Page = {
     title: "DotAlign React Single Page Application",
     description: "Redoing the DotAlign website in React",
-    keywords: ['react', 'work experience', 'single page application', 'spa', 'dotalign', 'website', 'web design', 'ui', 'frontend'],
+    keywords: ['react', 'reactjs', 'work experience', 'single page application', 'spa', 'dotalign', 'website', 'web design', 'ui', 'frontend'],
     url: 'dotalign/react-website',
     technologies: ['javascript', 'typescript', 'html', 'css', 'scss', '.net', 'react'],
     projectDates: '2017',

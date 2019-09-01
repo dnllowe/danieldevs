@@ -4,7 +4,7 @@ const SOSeo: Page = {
     title: 'SOSeo React + Node Search Engine Optimization App',
     description: 'A web application that helps content creators write search engine optimized content',
     keywords: ['seo', 'react', 'node', 'express', 'rest api', 'projects', 'html', 'css', 'scss', 'javascript', 'typescript', 'stripe', 'mailchimp', 'shopify', 'wordpress', 'axios', 'ajax', 'redux', 'bootstrap', 'frontend', 'backend', 'full stack', 'web design'],
-    technologies: ['typescript', 'javascript', 'node', 'sql', 'react', 'webpack', 'ajax', 'html', 'css', 'scss'],
+    technologies: ['typescript', 'javascript', 'node', 'sql', 'react', 'reactjs', 'webpack', 'ajax', 'html', 'css', 'scss'],
     url: 'soseo',
     projectDates: '2017-2018',
     rank: 0,
