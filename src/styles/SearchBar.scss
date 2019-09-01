@@ -2,6 +2,36 @@
 @import 'Effects.scss';
 @import 'ScreenSize.scss';
 
+.search-grid {
+    display: grid;
+
+    @include medium-and-larger {
+        grid-template-areas:
+        'search-header-area search-bar-area'
+        '.................. search-suggestions-area';
+        grid-template-columns: 2fr 6fr;
+    }
+
+    @include small-screens {
+        grid-template-areas:
+        'search-header-area'
+        'search-bar-area' 
+        'search-suggestions-area';
+    }
+}
+
+.search-header-area {
+    grid-area: 'search-header-area';
+}
+
+.search-bar-area {
+    grid-area: 'search-bar-area';
+}
+
+.search-suggestions-area {
+    grid-area: 'search-suggestions-area';
+}
+
 .search-header {
     color: coral;
 
@@ -99,7 +129,6 @@
     border-style: solid;
     border-width: 1px;
     padding: 14px;
-    margin-bottom: 20px;
 
     &:hover {
         @include shadow($exlightgray);
@@ -118,7 +147,7 @@
     background-color: #eeeeee;
     padding: 10px;
     border-radius: 4px;
-    margin: 5px;
+    margin: 25px 5px 5px 5px;
 
     &:hover {
         cursor: pointer;
@@ -136,17 +165,35 @@
     }
 }
 
-.search-suggestions-container {
-    position: absolute;
+@mixin search-suggestions-container {
     padding-left: 0px;
     text-align: left;
     list-style-type: none;
-    transform: translate(50%, -35px);
-    right: 50%;
     max-width: 582px;
-    width: 75%;
+
+    @include medium-and-larger {
+        width: 55%;
+    }
+
+    @include small-screens {
+        width: 80%;
+        margin: auto;
+    }
+    
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
     z-index: 2;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
+.search-suggestions-container-medium {
+    background-color: white;
+    @include search-suggestions-container();
+}
+
+.search-suggestions-container {
+    position: absolute;
+    @include search-suggestions-container();
+    transform: translateX(50%);
+    right: 50%;
+}
+
