@@ -18,7 +18,14 @@ const SOSeo: Page = {
             img: {
                 url: 'soseo.gif',
                 className: 'demo-gif'
-            }
+            },
+            relatedPages: [
+                {
+                    url: 'https://www.gososeo.com',
+                    text: 'Check out the live SOSeo web site',
+                    external: true
+                }
+            ]
         },
         {
             header: 'Frontend (React + Redux)',

@@ -13,6 +13,8 @@ export const submitSearchWithSuggestions = (
     if (searchSuggestionsContext.selection > -1) {
         navigateToSearch(searchSuggestionsContext.getSelectedSuggestion())
         searchContext.setSearchValue(searchSuggestionsContext.getSelectedSuggestion())
+    } else {
+        submitSearch(e, searchContext)
     }
 }
 

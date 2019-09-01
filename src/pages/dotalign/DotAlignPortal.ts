@@ -57,7 +57,14 @@ const DotAlignPortal: Page = {
             communication between components of the DotAlign cloud app and the function app
             (which runs all the business logic). The web app uses this service to place messages onto queues,
             letting the function app know when to start indexing user mail, when to stop, which teams it should
-            analyze data for, and when to run one-time events (like seeding market data into the database).`
+            analyze data for, and when to run one-time events (like seeding market data into the database).`,
+            relatedPages: [
+                {
+                    url: '/dotalign/severless-micro-services',
+                    text: 'DotAlign Azure Functions micro services',
+                    external: false
+                }
+            ]
         },
     ],
     rank: 0

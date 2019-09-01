@@ -29,13 +29,13 @@ export default (props: { path: string }) => {
                 
             </form>
             <div className='search-buttons-container'>
-            <button className='search-button' onClick={(e) => submitSearch(e, searchContext)}>
-                Search
-            </button>
-            <button className='search-button' onClick={(e) => goToRandomPage(e, searchContext)}>
-                I'm Feeling Lucky
-            </button>
-        </div>
+                <button className='search-button' onClick={(e) => submitSearch(e, searchContext)}>
+                    Search
+                </button>
+                <button className='search-button' onClick={(e) => goToRandomPage(e, searchContext)}>
+                    I'm Feeling Lucky
+                </button>
+            </div>
         </div>
     
     )

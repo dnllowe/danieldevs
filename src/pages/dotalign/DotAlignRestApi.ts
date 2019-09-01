@@ -13,7 +13,14 @@ const DotAlignRestApi: Page = {
             content: `The DotAlign REST API provides access to analytics on user email data and a
             mechanism to create and alter teams and users in the application. In addition to standard
             CRUD operations, I implemented middleware that powers admin consent for the applicatoin's permissions,
-            custom Azure Active Directory-based authorization, and user authentication through OAuth.`
+            custom Azure Active Directory-based authorization, and user authentication through OAuth.`,
+            relatedPages: [
+                {
+                    url: '/dotalign/frontend-portal',
+                    text: 'DotAlign Portal UI',
+                    external: false
+                }
+            ]
         }
     ],
     rank: 0

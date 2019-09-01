@@ -47,7 +47,7 @@ const RenderPage = (page: Page) => {
                         <p className='page-section-content'>{c.content}</p>
                         { c.component && c.component(null) }
                         {c.relatedPages && 
-                            <div>
+                            <div className='related-pages-container'>
                                 <p className='related-pages-header'>
                                     <strong>Related pages:</strong>
                                 </p>
