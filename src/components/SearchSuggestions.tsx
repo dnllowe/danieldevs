@@ -12,7 +12,7 @@ export default () => {
     const suggestions = getSuggestions(keywords, searchContext.searchValue)
 
     return (
-        <ul className='search-suggestions-container'>
+        <ul className='search-suggestions-area'>
             {suggestions.map(suggestion => {
                 return (
                     <li

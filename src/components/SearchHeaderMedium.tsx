@@ -40,13 +40,17 @@ export default (props: { path: string }) => {
     }, [ scrollY ])
 
     return (
-        <form className={`search-container-medium ${adjustedContainerClass}`} onSubmit={(e) => submitSearch(e, searchContext)}>
+        <form className={`search-container-medium ${adjustedContainerClass} search-grid`} onSubmit={(e) => submitSearch(e, searchContext)}>
             <Link to='/'>
-                <h1 className='search-header-medium'>Daniel Devs</h1>
+                <h1 className='search-header-medium search-header-area'>Daniel Devs</h1>
             </Link>
             <div className='search-bar-container-medium'>
                 <SearchBar />
-                {/* { searchContext.showSuggestions && <SearchSuggestions /> } */}
+                { searchContext.showSuggestions && 
+                    <div className='search-suggestions-container-medium'>
+                        <SearchSuggestions />
+                    </div> 
+                }
             </div>
         </form>
     )

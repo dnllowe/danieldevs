@@ -6,7 +6,7 @@ export default () => {
     const searchContext = useContext(SearchContext)
     
     return (
-        <div className='search-bar'>
+        <div className='search-bar search-bar-area'>
             <input 
                 className='search-bar-input'
                 value={searchContext.searchValue}

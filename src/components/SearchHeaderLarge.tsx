@@ -13,7 +13,11 @@ export default (props: { path: string }) => {
         <form className='search-container' onSubmit={(e) => submitSearch(e, searchContext)}>
             <h1 className='search-header'>Daniel Devs...</h1>
             <SearchBar />
-            { searchContext.showSuggestions && <SearchSuggestions /> }
+            { searchContext.showSuggestions && 
+                <div className='search-suggestions-container'>
+                    <SearchSuggestions />
+                </div> 
+            }
             <div className='search-buttons-container'>
                 <button className='search-button' onClick={(e) => submitSearch(e, searchContext)}>
                     Search
