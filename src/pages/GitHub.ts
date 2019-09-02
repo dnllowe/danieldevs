@@ -8,6 +8,7 @@ const GitHub: Page = {
     rank: 0,
     image: {
         url: '/github.jpg',
+        caption: 'The GitHub logo belongs to GitHub. Other legal sounding stuff...',
         className: 'github-img'
     },
     technologies: [ 'git', 'github' ],

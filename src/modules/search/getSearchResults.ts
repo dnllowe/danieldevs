@@ -1,7 +1,6 @@
 import { getAllWordForms } from './getAllWordForms'
 import { Page } from '../../pages/Page'
 import { similarConcepts } from './similarConcepts'
-import { SearchContext } from '../../context/SearchContext'
 
 const createSearchMap = (searchValue: string) => {
     const searchMap: { [key: string]: string } = {}
@@ -28,7 +27,7 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
     
     searchValue = searchValue.trim()
 
-    if (searchValue === '') { return []}
+    if (searchValue === '' || null || undefined) { return []}
 
     searchValue = searchValue.toLowerCase()
     const searchMap = createSearchMap(searchValue)

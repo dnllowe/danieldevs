@@ -6,8 +6,8 @@ export type RelatedPage = {
 
 type SectionImage = {
     url: string
+    caption: string
     title?: string
-    caption?: string
     className?: string
 }
 

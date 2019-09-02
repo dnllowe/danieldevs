@@ -1,1 +1,3 @@
-export const scrollToTop = () => setTimeout(() => window.scroll(0,0), 1)
+import { runAtEndOfEventLoop } from "../events/runAtEndOfEventLoop"
+
+export const scrollToTop = () => runAtEndOfEventLoop(() => window.scroll(0,0))

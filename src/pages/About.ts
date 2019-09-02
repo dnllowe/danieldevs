@@ -9,6 +9,7 @@ const About: Page = {
     title: 'About me',
     image: {
         url: 'me-sm.jpg',
+        caption: "It's me!",
         className: 'profile-picture'
     },
     keywords: [

@@ -6,6 +6,7 @@ import SearchSuggestions from './SearchSuggestions'
 import { Link } from '@reach/router'
 import handleSearchSelectionInput from '../modules/events/handleSearchSelectionInput'
 import { SearchSuggestionsContext } from '../context/SearchSuggestionsContext'
+import { runAtEndOfEventLoop } from '../modules/events/runAtEndOfEventLoop'
 
 const SHOW_SEARCH_THRESHOLD = 100
 
@@ -37,8 +38,13 @@ export default (props: { path: string }) => {
     return (
         <form 
             className={`search-container-medium ${adjustedContainerClass} search-grid`} 
-            onSubmit={(e) => submitSearchWithSuggestions(e, searchContext, searchSuggestionsContext)} 
+            onSubmit={(e) => { 
+                e.preventDefault()
+                submitSearchWithSuggestions(searchContext, searchSuggestionsContext)
+            }}
             onKeyDown={(e) => handleSearchSelectionInput(e, searchSuggestionsContext)}
+            onBlur={(e) => runAtEndOfEventLoop(() => searchContext.setShowSuggestions(false))}
+            
         >
             <Link to='/'>
                 <h1 className='search-header-medium search-header-area'>Daniel Devs</h1>

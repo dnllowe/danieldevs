@@ -15,6 +15,7 @@ const DotAlignReactWebsite: Page = {
             bring the features to life and give the site a facelift.`,
             img: {
                 url: '/dotalign-site.gif',
+                caption: 'Demo of the DotAlign landing page',
                 className: 'demo-gif'
             }
         },

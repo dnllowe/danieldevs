@@ -8,17 +8,24 @@ import { Link } from '@reach/router'
 
 const pagesByUrl = getPagesByUrl(Pages)
 
-const RenderRelatedPage = (relatedPage: RelatedPage) => (
-    <li key={relatedPage.url}>
-    {relatedPage.external && <a href={relatedPage.url} target='_blank' rel='noopener noreferrer'>{relatedPage.text}</a>}
-    {!relatedPage.external && <Link to={relatedPage.url}>{relatedPage.text}</Link>}
+const RelatedPageView = (props: { relatedPage: RelatedPage }) => (
+    <li key={props.relatedPage.url}>
+    {props.relatedPage.external && <a href={props.relatedPage.url} target='_blank' rel='noopener noreferrer'>{props.relatedPage.text}</a>}
+    {!props.relatedPage.external && <Link to={props.relatedPage.url}>{props.relatedPage.text}</Link>}
     </li>
 )
 
-const RenderPage = (page: Page) => {
+const Image = (props: { className?: string, url: string, caption: string }) => (
+    <div>
+        <img src={props.url} alt={props.caption} className={props.className} />
+    </div>
+)
+
+const PageView = (props: { page: Page }) => {
 
     let key = 0
-    
+    const { page } = props
+
     useEffect(() => {
         scrollToTop()
     })
@@ -26,7 +33,7 @@ const RenderPage = (page: Page) => {
     return (
         <section className='app-container page-container'>
             <h1 className='page-header'>{page.title}</h1>
-            {page.image && <img src={page.image.url} className={page.image.className} />}
+            {page.image && <Image {...page.image} /> }
             {page.technologies && 
                 <p className={page.projectDates ? '' : 'page-technologies'}>
                     <strong>Technologies used: </strong>
@@ -43,7 +50,7 @@ const RenderPage = (page: Page) => {
                 return (
                     <section key={key++}>
                         <h3 className='page-section-header'>{c.header}</h3>
-                        {c.img && <img src={c.img.url} className={c.img.className} />}
+                        {c.img && <Image {...c.img} />}
                         <p className='page-section-content'>{c.content}</p>
                         { c.component && c.component(null) }
                         {c.relatedPages && 
@@ -52,7 +59,7 @@ const RenderPage = (page: Page) => {
                                     <strong>Related pages:</strong>
                                 </p>
                                 <ul>
-                                    {c.relatedPages.map(RenderRelatedPage)}
+                                    {c.relatedPages.map(rp => <RelatedPageView relatedPage={rp} />)}
                                 </ul>
                             </div>
                         } 
@@ -70,7 +77,7 @@ export default (props: { path: string, uri?: string }) => {
 
     return (
         <article>
-            { page && RenderPage(page)}
+            { page && <PageView page={page} />}
             { pageNotFound && <PageNotFound />}
         </article>
     )

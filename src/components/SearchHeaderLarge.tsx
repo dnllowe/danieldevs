@@ -6,6 +6,7 @@ import { submitSearch, submitSearchWithSuggestions } from '../modules/search/sub
 import SearchSuggestions from './SearchSuggestions'
 import { goToRandomPage } from '../modules/search/goToRandomPage'
 import handleSearchSelectionInput from '../modules/events/handleSearchSelectionInput'
+import { runAtEndOfEventLoop } from '../modules/events/runAtEndOfEventLoop'
 
 export default (props: { path: string }) => {
     
@@ -16,9 +17,13 @@ export default (props: { path: string }) => {
         <div>
 
             <form className='search-container' 
-                onSubmit={(e) => submitSearchWithSuggestions(e, searchContext, searchSuggestionsContext)} 
-                onKeyDown={(e) => handleSearchSelectionInput(e, searchSuggestionsContext)
-            }>
+                onSubmit={(e) => {
+                    e.preventDefault()
+                    submitSearchWithSuggestions(searchContext, searchSuggestionsContext)
+                }}
+                onKeyDown={(e) => handleSearchSelectionInput(e, searchSuggestionsContext)}
+                onBlur={(e) => runAtEndOfEventLoop(() => searchContext.setShowSuggestions(false))}
+            >
                 <h1 className='search-header'>Daniel Devs...</h1>
                 <SearchBar />
                 { searchContext.showSuggestions && 
@@ -29,10 +34,13 @@ export default (props: { path: string }) => {
                 
             </form>
             <div className='search-buttons-container'>
-                <button className='search-button' onClick={(e) => submitSearch(e, searchContext)}>
+                <button className='search-button' onClick={(e) => submitSearch(searchContext)}>
                     Search
                 </button>
-                <button className='search-button' onClick={(e) => goToRandomPage(e, searchContext)}>
+                <button className='search-button' onClick={(e) => { 
+                    e.preventDefault()
+                    goToRandomPage(searchContext)}}
+                >
                     I'm Feeling Lucky
                 </button>
             </div>

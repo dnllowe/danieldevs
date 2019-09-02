@@ -12,11 +12,12 @@ export default () => {
 
     const searchContext = useContext(SearchContext)
     const searchSuggestionsContext = useContext(SearchSuggestionsContext)
-
+    const { setSuggestions } = searchSuggestionsContext
+    
     useEffect(() => {
         const suggestions = getSuggestions(keywords, searchContext.searchValue)
-        searchSuggestionsContext.setSuggestions(suggestions)
-    }, [ searchContext.searchValue ])
+        setSuggestions(suggestions)
+    }, [ searchContext.searchValue, setSuggestions ])
 
     const suggestions = searchSuggestionsContext.suggestions
     const selectedSuggestion = searchSuggestionsContext.getSelectedSuggestion()
@@ -29,8 +30,10 @@ export default () => {
                         className={`search-suggestion ${suggestion === selectedSuggestion && 'search-suggestion-selected'}`}
                         key={suggestion}
                         onClick={(e) => { 
+                            e.preventDefault()
                             searchContext.setSearchValue(suggestion)
                             searchContext.setShowSuggestions(false)
+                            searchContext.setLoading(true)
                             navigateToSearch(suggestion)
                         }}
                     >

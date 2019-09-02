@@ -17,6 +17,7 @@ const SOSeo: Page = {
             The site is live and used daily.`,
             img: {
                 url: 'soseo.gif',
+                caption: 'Demo of SOSeo scoring a page based on keywords and title',
                 className: 'demo-gif'
             },
             relatedPages: [

@@ -23,42 +23,43 @@ const SearchSuggestionsContextProvider = (props: any) => {
     const [ suggestions, setSuggestions ] = useState<string[]>([])
     const [ selection, setSelection ] = useState(-1)
 
-    const increaseSelection = () => {
-
-        if (!suggestions.length) {
-            setSelection(-1)
-        } else {
-            let newSelection = selection + 1
-            
-            if (newSelection >= suggestions.length) {
-                newSelection = suggestions.length - 1
-            }
-
-            setSelection(newSelection)
-        }
-    }
-
-    const decreaseSelection = () => {
-
-        if (!suggestions.length) {
-            setSelection(-1)
-        } else {
-
-            let newSelection = selection - 1
-    
-            if (newSelection < 0) {
-                newSelection = 0
-            }
-    
-            setSelection(newSelection)
-        }
-    }
-
-    const getSelectedSuggestion = () => {
-        return suggestions[selection]
-    }
-
     const searchSuggestionsContextProvider = useMemo<SearchSuggestionsContext>(() => {
+
+        const increaseSelection = () => {
+
+            if (!suggestions.length) {
+                setSelection(-1)
+            } else {
+                let newSelection = selection + 1
+                
+                if (newSelection >= suggestions.length) {
+                    newSelection = suggestions.length - 1
+                }
+    
+                setSelection(newSelection)
+            }
+        }
+    
+        const decreaseSelection = () => {
+    
+            if (!suggestions.length) {
+                setSelection(-1)
+            } else {
+    
+                let newSelection = selection - 1
+        
+                if (newSelection < 0) {
+                    newSelection = 0
+                }
+        
+                setSelection(newSelection)
+            }
+        }
+    
+        const getSelectedSuggestion = () => {
+            return suggestions[selection]
+        }
+
         return {
             suggestions,
             setSuggestions,
@@ -70,10 +71,7 @@ const SearchSuggestionsContextProvider = (props: any) => {
     }, [ 
             suggestions, 
             setSuggestions, 
-            selection, 
-            increaseSelection, 
-            decreaseSelection, 
-            getSelectedSuggestion 
+            selection
         ])
 
     return <SearchSuggestionsContext.Provider value={searchSuggestionsContextProvider}{...props} />

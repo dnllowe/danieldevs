@@ -8,6 +8,7 @@ const DotAlignDockerMigration: Page = {
     technologies: ['c#', '.net', 'powershell', 'docker', 'kubectl'],
     image: {
         url: '/docker.png',
+        caption: 'The Docker logo. Because containers. Get it?',
         className: 'docker-img'
     },
     projectDates: '2018',

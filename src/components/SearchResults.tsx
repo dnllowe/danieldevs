@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { getSearchResults } from '../modules/search/getSearchResults'
 import SearchResult from './SearchResult'
 import Pages from '../pages'
@@ -17,41 +17,55 @@ const convertLocationToQuery = (location: Location) => {
     return query.replace('+', ' ')
 }
 
-const RenderSearchResults = (pages: Page[]) => (
+const SearchResultsList = (props: { pages: Page[] }) => (
     <ul className='search-results-container'>
-        { pages.map(p => <SearchResult key={p.url} page={p} />) }
+        { props.pages.map(p => <SearchResult key={p.url} page={p} />) }
     </ul>
 )
 
-const RenderNoResultsFound = () => (
+const NoResultsFound = () => (
     <h1 className='page-section-header no-search-results-container'>
         I didn't find any results for that, sorry.
     </h1>
 )
 
-const RenderLoading = () => (
-    <div className='loader page-container' />
+const Loader = () => (
+    <div className='loader-container'>
+        <div className='loader' />
+    </div>
 )
 
 const SearchResults = (props: { path: string, location?: Location }) => {
     
-    const searchContext = useContext(SearchContext)
     const searchQuery = props.location ? convertLocationToQuery(props.location) : ''
-    const loading = searchContext.loading
+    const [ searchResults, setSearchResults ] = useState<Page[]>([])
+    const searchContext = useContext(SearchContext)
+    const { loading, setLoading, setSearchValue } = searchContext
     
     useEffect(() => {
         scrollToTop()
-        const fetchedSearchResults = getSearchResults(Pages, searchQuery)
-        searchContext.setSearchResults(fetchedSearchResults)
-        searchContext.setLoading(false)
-        return () => searchContext.setSearchResults([])
-    }, [ searchQuery ])
+        setSearchValue(searchQuery)
+        setLoading(true)
+        setSearchResults(getSearchResults(Pages, searchQuery))
+    }, [ searchQuery, setLoading, setSearchValue, setSearchResults ])
+
+    useEffect(() => {
+        scrollToTop()
+        setLoading(false)
+    }, [ setLoading, searchResults ])
+
+    useEffect(() => {
+        return () => {
+            setLoading(true)
+            setSearchResults([])
+        }
+    }, [ setLoading, setSearchResults ])
 
     return (
         <div className='app-container'>
-            { loading && RenderLoading() }
-            { !loading && searchContext.searchResults.length > 0 && RenderSearchResults(searchContext.searchResults) }
-            { !loading && searchContext.searchResults.length === 0 && RenderNoResultsFound() }
+            { loading && <Loader /> }
+            { !loading && searchResults.length > 0 && <SearchResultsList pages={searchResults} /> }
+            { !loading && searchResults.length === 0 && <NoResultsFound /> }
         </div>
     )
 }
