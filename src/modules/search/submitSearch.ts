@@ -6,7 +6,6 @@ export const submitSearchWithSuggestions = (
     searchContext: SearchContext,
     searchSuggestionsContext: SearchSuggestionsContext) => {
 
-    // searchContext.setLoading(true)
     searchContext.setShowSuggestions(false)
 
     if (searchSuggestionsContext.selection > -1) {
@@ -19,8 +18,6 @@ export const submitSearchWithSuggestions = (
 
 export const submitSearch = (searchContext: SearchContext) => {
 
-    // searchContext.setLoading(true)
     searchContext.setShowSuggestions(false)
-
     navigateToSearch(searchContext.searchValue)
 }

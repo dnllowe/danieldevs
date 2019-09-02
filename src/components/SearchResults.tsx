@@ -41,16 +41,15 @@ const SearchResults = (props: { path: string, location?: Location }) => {
     const [ searchResults, setSearchResults ] = useState<Page[]>([])
     const searchContext = useContext(SearchContext)
     const { loading, setLoading, setSearchValue } = searchContext
-    
+    scrollToTop()
+
     useEffect(() => {
-        scrollToTop()
         setSearchValue(searchQuery)
         setLoading(true)
         setSearchResults(getSearchResults(Pages, searchQuery))
     }, [ searchQuery, setLoading, setSearchValue, setSearchResults ])
 
     useEffect(() => {
-        scrollToTop()
         setLoading(false)
     }, [ setLoading, searchResults ])
 

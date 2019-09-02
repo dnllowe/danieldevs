@@ -33,7 +33,6 @@ export default () => {
                             e.preventDefault()
                             searchContext.setSearchValue(suggestion)
                             searchContext.setShowSuggestions(false)
-                            searchContext.setLoading(true)
                             navigateToSearch(suggestion)
                         }}
                     >
