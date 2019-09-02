@@ -24,7 +24,6 @@ export default () => {
                     }
                 }}
              />
-             <i className="search-bar-icon fas fa-times" onClick={() => searchContext.setSearchValue('')} />
         </div>
     )
 }

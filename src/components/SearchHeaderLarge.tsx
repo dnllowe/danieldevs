@@ -26,6 +26,7 @@ export default (props: { path: string }) => {
             >
                 <h1 className='search-header'>Daniel Devs...</h1>
                 <SearchBar />
+                <i className="search-bar-icon fas fa-times" onClick={() => searchContext.setSearchValue('')} />
                 { searchContext.showSuggestions && 
                     <div className='search-suggestions-container'>
                         <SearchSuggestions />

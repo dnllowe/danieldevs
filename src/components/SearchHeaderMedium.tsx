@@ -51,6 +51,7 @@ export default (props: { path: string }) => {
             </Link>
             <div className='search-bar-container-medium'>
                 <SearchBar />
+                <i className="search-bar-icon-medium fas fa-times" onClick={() => searchContext.setSearchValue('')} />
                 { searchContext.showSuggestions && 
                     <div className='search-suggestions-container-medium'>
                         <SearchSuggestions />
