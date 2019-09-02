@@ -1,1 +1,1 @@
-export const scrollToTop = () => setTimeout(() => window.scroll(0,0))
+export const scrollToTop = () => setTimeout(() => window.scroll(0,0), 1)
