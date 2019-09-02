@@ -1,6 +1,7 @@
 import { getAllWordForms } from './getAllWordForms'
 import { Page } from '../../pages/Page'
 import { similarConcepts } from './similarConcepts'
+import { SearchContext } from '../../context/SearchContext'
 
 const createSearchMap = (searchValue: string) => {
     const searchMap: { [key: string]: string } = {}

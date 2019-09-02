@@ -8,6 +8,8 @@ export type SearchContext = {
     setSearchResults: (results: Page[]) => void
     showSuggestions: boolean
     setShowSuggestions: (show: boolean) => void
+    loading: boolean
+    setLoading: (isLoading: boolean) => void
 }
 
 export const SearchContext = createContext<SearchContext>({
@@ -16,7 +18,9 @@ export const SearchContext = createContext<SearchContext>({
     searchResults: [],
     setSearchResults: () => {},
     showSuggestions: false,
-    setShowSuggestions: () => {}
+    setShowSuggestions: () => {},
+    loading: false,
+    setLoading: () => {}
 })
 
 const SearchContextProvider = (props: any) => {
@@ -24,6 +28,7 @@ const SearchContextProvider = (props: any) => {
     const [ searchValue, setSearchValue ] = useState('')
     const [ searchResults, setSearchResults ] = useState<Page[]>([])
     const [ showSuggestions, setShowSuggestions ] = useState(false)
+    const [ loading, setLoading ] = useState(false)
 
     const searchContextProvider = useMemo<SearchContext>(() => {
         return { 
@@ -32,7 +37,9 @@ const SearchContextProvider = (props: any) => {
             searchResults, 
             setSearchResults, 
             showSuggestions, 
-            setShowSuggestions 
+            setShowSuggestions,
+            loading,
+            setLoading 
         } 
     }, [ 
         searchValue, 
@@ -40,7 +47,9 @@ const SearchContextProvider = (props: any) => {
         searchResults,
         setSearchResults,
         showSuggestions,
-        setShowSuggestions
+        setShowSuggestions,
+        loading,
+        setLoading
     ])
 
     return <SearchContext.Provider value={searchContextProvider}{...props} />

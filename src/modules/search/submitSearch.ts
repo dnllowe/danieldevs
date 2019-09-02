@@ -8,7 +8,8 @@ export const submitSearchWithSuggestions = (
     searchSuggestionsContext: SearchSuggestionsContext) => {
 
     e.preventDefault();
-    searchContext.setShowSuggestions(false);
+    searchContext.setLoading(true)
+    searchContext.setShowSuggestions(false)
 
     if (searchSuggestionsContext.selection > -1) {
         navigateToSearch(searchSuggestionsContext.getSelectedSuggestion())
@@ -23,7 +24,8 @@ export const submitSearch = (
     searchContext: SearchContext) => {
 
     e.preventDefault();
+    searchContext.setLoading(true)
+    searchContext.setShowSuggestions(false)
     
-    searchContext.setShowSuggestions(false);
     navigateToSearch(searchContext.searchValue)
 }

@@ -29,23 +29,29 @@ const RenderNoResultsFound = () => (
     </h1>
 )
 
+const RenderLoading = () => (
+    <div className='loader page-container' />
+)
+
 const SearchResults = (props: { path: string, location?: Location }) => {
     
     const searchContext = useContext(SearchContext)
     const searchQuery = props.location ? convertLocationToQuery(props.location) : ''
+    const loading = searchContext.loading
     
     useEffect(() => {
         scrollToTop()
         const fetchedSearchResults = getSearchResults(Pages, searchQuery)
         searchContext.setSearchResults(fetchedSearchResults)
+        searchContext.setLoading(false)
         return () => searchContext.setSearchResults([])
     }, [ searchQuery ])
-    
-    
+
     return (
         <div className='app-container'>
-            { searchContext.searchResults.length > 0 && RenderSearchResults(searchContext.searchResults) }
-            { !searchContext.searchResults.length && RenderNoResultsFound() }
+            { loading && RenderLoading() }
+            { !loading && searchContext.searchResults.length > 0 && RenderSearchResults(searchContext.searchResults) }
+            { !loading && searchContext.searchResults.length === 0 && RenderNoResultsFound() }
         </div>
     )
 }
