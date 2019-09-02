@@ -11,8 +11,8 @@ const DotAlignPortal: Page = {
         {
             header: "Overview",
             content: `The portal replaces what was once the native Outlook addin UI.
-            The DotAlign portal let's users create a DotAlign instance for themselves in the cloud,
-            join teams to share data with, and request insights about them and their team's data.
+            The DotAlign portal lets users create a DotAlign instance for themselves in the cloud,
+            join teams to share data with, and request insights about their data and data shared to them from the team.
             We used Elm as our frontend framework, a functional language that complies to javascript.
             Elm pioneered the pattern many know as Redux for state management.
             Below are the features I built for the portal.`
@@ -21,31 +21,31 @@ const DotAlignPortal: Page = {
             header: "Implementing the Style Guide",
             content: `A designer created the look and feel for the portal. Once the design was final,
             I created reusable components for common elements, such as headers, buttons, avatars, panels,
-            and various types of lists. I used SCSS so I and other developers working on the portal could reuse
+            and various types of lists. I used SCSS so that I and other developers working on the portal could reuse
             styles more easily. This helped reduce css bloat, streamlined tweaking UI, and kept the site looking
             consistent. After creating most of the foundational components, other developers were able to 
             quickly create new pages from them.`
         },
         {
             header: "CSS Grid for Responsive Layout",
-            content: `I think I'm done with Bootstrap's column and row pattern. It leaks a lot of design
-            logic into the layout and things can get messy fast. I chose to go with CSS Grid and it was a great
-            decision. Media queries control the grid layout from css. Placement of elements is at the grid level
-            using grid templates and areas. With this implementation, the html didn't have to change--even 
+            content: `I used the native CSS Grid to create a flexible, responsive layout.
+            Using grid-template-areas and media queries, I was able to control the grid layout entirely from within css. 
+            With this implementation, the html didn't have to change--even 
             if a navbar shifted from the top to the side, etc. I used libraries like auto-prefixer and caniuse
             along with some reusable SCSS mixins to maintain backwards compatibility back to IE 10.`
         },
         {
             header: "Authenticating and Authorizing Users and Routes",
             content: `I created middleware for the .NET server that checks if the user is part of a
-            specific group in Azure Active Directory beforing passing request through the API.
+            specific group in Azure Active Directory. 
+            Only requests from authorized users in the group pass through the API.
             I use a .NET library to authenticate users with OAuth.`
         },
         {
             header: "Azure Configuration and Deployment",
             content: `In order for the web application to work, it needs certain environment variables set
             and permission to read Azure Active Directory and the Microsoft Graph API on behalf of users
-            and the Azure tenant. This require registering an application with Azure, creating a UI flow for 
+            and the Azure tenant. This requires registering an application with Azure, creating a UI flow for 
             admin consent of application permissions, and configuring the correct settings in the Azure Portal.
             I researched and setup the configuration for the application. Eventually, other team members automated
             this process with a deployment script clients can use to install the DotAlign cloud app.`

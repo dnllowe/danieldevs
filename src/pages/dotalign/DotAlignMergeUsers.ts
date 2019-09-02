@@ -13,19 +13,16 @@ const DotAlignMergeUsers: Page = {
             content: `The DotAlign Outlook addin was originally implemented with an unnoticed assumption 
             that a user should be tightly coupled to their original username and device. 
             However, in practice, users change laptops and even their primary email address occasionally.
-            I implemented new logic that would allow data for the same user on different devices remain in sync.
+            I implemented new logic that would allow users to have more than one DotAlign user account.
+            The change also keeps data in sync across all accounts.
             In addition, I also added a feature that would allow a user to sync a different user account with
-            their own.`
+            their own, letting different users share the same data easily.`
         },
         {
             header: 'Implementation for Same User Sync Across Devices',
-            content: `In the Outlook addin, users already back up exports of their analyzed data 
-            if they are sharing data to a team location. When users import data shared from other team members,
-            we ignore the user's own data, with the assumption they already have it. However, this isn't the case
-            when a user changes devices or reinstalls the app. To accommodate this use case, I created a step
-            during installation that assigns a GUID to the installation of DotAlign for that user. This GUID is linked
-            to their exported files. Now, when importing data, if the application notices the GUID is different,
-            it will import the data, even for the same user.`
+            content: `I created backups of the users' data along with a GUID associated to their installation.
+            Periodically, the application checks for data backups for each user and imports any where the username
+            matches but the GUIDs differ.`
         },
         {
             header: 'Implementation for Syncing Different Users',
@@ -33,7 +30,7 @@ const DotAlignMergeUsers: Page = {
             There were specific SQL joins dictating how a user might analyze data. At a high level, only
             certain data "belonged" to the user, and users were originally tied to a single entity. To
             overcome this, I migrated the schema to support a many-to-many relationship between users.
-            I then updated all of the SQL, mostly through JOINS, to account for more than one user
+            I then updated all of the SQL, JOINing against the new many-to-many table, to account for more than one user
             owning data.`
         }
     ],
