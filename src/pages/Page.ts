@@ -12,9 +12,9 @@ type SectionImage = {
 }
 
 type PageSection = {
-    header: string
-    img?: SectionImage
     content: string
+    header?: string
+    img?: SectionImage
     relatedPages?: RelatedPage[],
     component?: (props: any) => JSX.Element
 }

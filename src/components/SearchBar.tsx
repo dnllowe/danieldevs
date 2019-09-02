@@ -4,7 +4,7 @@ import { SearchContext } from '../context/SearchContext'
 export default () => {
 
     const searchContext = useContext(SearchContext)
-
+    
     return (
         <div className='search-bar search-bar-area'>
             <input 
@@ -24,6 +24,7 @@ export default () => {
                     }
                 }}
              />
+             <i className="search-bar-icon fas fa-times" onClick={() => searchContext.setSearchValue('')} />
         </div>
     )
 }

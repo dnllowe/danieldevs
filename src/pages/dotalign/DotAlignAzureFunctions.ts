@@ -32,7 +32,7 @@ const DotAlignAzureFunction: Page = {
             header: 'Indexing the most important items',
             content: `In order to get the most top-of-mind emails in the system first, I took a two-pronged approach. 
             Starting from the time the function begins, it requests a batch of the most recent mail items in 
-            the past, and any that may have come in sense the function last ran. I track the newest and oldest 
+            the past, and any that may have come in since the function last ran. I track the newest and oldest 
             messages fetched. The next time the function runs, it will use the oldest and newest message
             timestamps and fan out from there.`
         },
@@ -48,18 +48,17 @@ const DotAlignAzureFunction: Page = {
             content: `When working with Azure Functions, much of the logic for how functions interact
             with queues and triggers is built into the code of the function app. However, there were
             times we needed other parts of the DotAlign application, like the web app, to access these
-            queues and triggers. I implemented the services that exposed endpoints other DotAlign
-            components used interact with the function app.`
+            queues and triggers. I implemented the services that exposed the endpoints other DotAlign
+            components use to interact with the function app.`
         },
         {
             header: 'Automating Seed Data Conversion from XML to Json',
             content: `When a DotAlign instance begins, we seed the database with information on well-known
             companies, industries, domain names, etc. Previously, this data was stored in XML. It was
-            decided that this data should be in json format to make it easier to maniuplate. And admin
+            decided that this data should be in json format to make it easier to manipulate. An admin
             said they could transcribe it, but there were thousands of data points.`
         },
         {
-            header: '',
             content: `I was able to write a quick Node application to read and convert the XML into json for the admin,
             saving possibly days of work and leaving behind a repeatable mechanism in case we purchased
             or received more data from external sources that was in XML format.`

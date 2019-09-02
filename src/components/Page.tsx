@@ -49,7 +49,7 @@ const PageView = (props: { page: Page }) => {
             {page.content.map(c => {
                 return (
                     <section key={key++}>
-                        <h3 className='page-section-header'>{c.header}</h3>
+                        {c.header && <h3 className='page-section-header'>{c.header}</h3>}
                         {c.img && <Image {...c.img} />}
                         <p className='page-section-content'>{c.content}</p>
                         { c.component && c.component(null) }

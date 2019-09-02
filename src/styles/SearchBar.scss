@@ -125,7 +125,7 @@
     display: inline;
 }
 
-.search-bar-input {
+@mixin search-bar-size {
     max-width: 582px;
 
     @include small-screens {
@@ -142,7 +142,11 @@
     @include medium-and-larger {
         width: 50%;
     }
+}
 
+.search-bar-input {
+    
+    @include search-bar-size();
     border-radius: 25px;
     border-color: $lightgray;
     border-style: solid;
@@ -220,5 +224,26 @@
     @include search-suggestions-container();
     transform: translateX(50%);
     right: 50%;
+}
+
+.search-bar-icon {
+    display: inline;
+    color: $lightgray;
+    position: absolute;
+    left: 48%;
+    
+    @include search-bar-size();
+
+    @include medium-and-larger {
+        transform: translateY(17px);
+    }
+
+    @include small-screens {
+        transform: translateY(-30px);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
