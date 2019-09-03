@@ -8,6 +8,7 @@ import Education from './Education'
 import Resume from './Resume'
 import Portfolio from './Portfolio'
 import GitHub from './GitHub'
+import Tap3 from './Tap3'
 
 export default [ 
     About,
@@ -19,5 +20,6 @@ export default [
     Education,
     Resume,
     Portfolio,
-    GitHub
+    GitHub,
+    Tap3
 ]

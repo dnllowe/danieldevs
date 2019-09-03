@@ -59,7 +59,7 @@ const PageView = (props: { page: Page }) => {
                                     <strong>Related pages:</strong>
                                 </p>
                                 <ul>
-                                    {c.relatedPages.map(rp => <RelatedPageView key={key + key} relatedPage={rp} />)}
+                                    {c.relatedPages.map(rp => <RelatedPageView key={rp.url} relatedPage={rp} />)}
                                 </ul>
                             </div>
                         } 

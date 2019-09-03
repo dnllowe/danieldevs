@@ -43,7 +43,14 @@ const About: Page = {
             it had the most modern curriculum: Node, React + Redux, and PostgreSQL.
             It was a great experience working together with other developers for the first time, and the course work was fantastic. The instructors did a great job teaching us fundamental CS concepts like data structures and algorithms,
             but we also spent every day building actual web applications using Node and React. Fullstack was definitely one of the best experiences of my life.
-            `
+            `,
+            relatedPages: [
+                {
+                    url: '/tap3-ios-android-mobile-game',
+                    text: 'My first mobile game release',
+                    external: false
+                }
+            ]
         },
         {
             header: "Life as a Developer",
