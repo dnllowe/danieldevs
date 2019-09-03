@@ -8,7 +8,19 @@ const Contact: Page = {
     rank: 0,
     content: [{
         header: '',
-        content: "You can email me at dnllowe2@gmail.com. If you'd like to speak on the phone, please email first :)"
+        content: "You can email me at dnllowe2@gmail.com. If you'd like to speak on the phone, please email first :)",
+        relatedPages: [
+            {
+                url: '/resume',
+                text: 'Check out my resume',
+                external: false
+            },
+            {
+                url: 'https://www.linkedin.com/in/dnllowe',
+                text: 'Check out my LinkedIn page',
+                external: true
+            }
+        ]
     }]
 }
 

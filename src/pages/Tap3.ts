@@ -1,5 +1,5 @@
 import { Page } from './Page'
-import Tap3Video from '../components/Tap3Video';
+import Tap3Video from '../components/Tap3Video'
 
 const Tap3: Page = {
     title: 'Tap 3 iOS and Android Mobile Game',
@@ -7,6 +7,7 @@ const Tap3: Page = {
     keywords: [ 'android', 'ios', 'projects', 'mobile', 'cocos2d', 'game development', 'tap 3' ],
     url: 'tap3-ios-android-mobile-game',
     rank: 0,
+    projectDates: '2016',
     image: {
         url: '/tap3-logo.jpg',
         caption: 'Tap 3 tiles logo -- iOS and Android mobile game',

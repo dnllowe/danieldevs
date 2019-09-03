@@ -50,7 +50,7 @@ const Barter: Page = {
             back to the user. A full round trip usually takes mere milliseconds.`
         },
         {
-            header: "GraphQL Backend API",
+            header: "GraphQL Backend API with Neo4j / Cypher",
             content: `Using GraphQL with a Neo4j graph database made the backend code almost non-existent. 
             It's amazing. First I created the schema, including only the types of data in my graph.
             Then, I used the neo4j-graphql library to automatically generate basic CRUD cypher 
@@ -62,12 +62,11 @@ const Barter: Page = {
             I definitely want to use GraphQL more in the future.`
         },
         {
-            header: "GraphQL and Apollo",
-            content: `After reading about GraphQL and how it solved many common problems vs traditional
-            REST APIs (namely boilerplate for many types of requests and n+1 fetching), I decided to implement
-            a GraphQL schema and endpoint for use in the frontend. After the initial learning curve, development
-            has been fluid and the lack of boilerplate and efficiency in requesting specific data has made
-            requesting and updating data simple and straightforward.`
+            content: `I use Apollo on the frontend to interact with the API in React.
+            I'm able to rely Apollo's many built-in features, such as subscribing to data changes and 
+            asynchronous fetching. This lets development move more quickly, as I don't have to reinvent the wheel
+            for these common problems.
+            .`
         },
     ],
     url: 'barter-react-native-app',
