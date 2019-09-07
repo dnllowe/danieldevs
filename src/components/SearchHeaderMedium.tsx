@@ -43,8 +43,6 @@ export default (props: { path: string }) => {
                 submitSearchWithSuggestions(searchContext, searchSuggestionsContext)
             }}
             onKeyDown={(e) => handleSearchSelectionInput(e, searchSuggestionsContext)}
-            onBlur={(e) => runAtEndOfEventLoop(() => searchContext.setShowSuggestions(false))}
-            
         >
             <Link to='/'>
                 <h1 className='search-header-medium search-header-area'>Daniel Devs</h1>

@@ -9,7 +9,8 @@ export const keyMap = {
     RIGHT: 'Right',
     ENTER: 'Enter',
     ESC: 'Esc',
-    ESCAPE: 'Escape'
+    ESCAPE: 'Escape',
+    TAB: 'Tab'
 }
 
 export class KeyDetector {
@@ -19,4 +20,5 @@ export class KeyDetector {
     isRightPressed = (event: KeyboardEvent) => event.key === keyMap.ARROW_RIGHT || event.key === keyMap.RIGHT
     isEnterPressed = (event: KeyboardEvent) => event.key === keyMap.ENTER
     isEscapePressed = (event: KeyboardEvent) => event.key === keyMap.ESC || event.key === keyMap.ESCAPE
+    isTabPressed = (event: KeyboardEvent) => event.key === keyMap.TAB
 }

@@ -10,6 +10,7 @@ const handleSearchSelectionInput = (
         case keyMap.ARROW_RIGHT:
         case keyMap.DOWN:
         case keyMap.RIGHT:
+        case keyMap.TAB:
             searchSuggestionContext.increaseSelection()
             break
         case keyMap.ARROW_UP:

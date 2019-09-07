@@ -22,7 +22,6 @@ export default (props: { path: string }) => {
                     submitSearchWithSuggestions(searchContext, searchSuggestionsContext)
                 }}
                 onKeyDown={(e) => handleSearchSelectionInput(e, searchSuggestionsContext)}
-                onBlur={(e) => runAtEndOfEventLoop(() => searchContext.setShowSuggestions(false))}
             >
                 <h1 className='search-header'>Daniel Devs...</h1>
                 <SearchBar />
