@@ -6,7 +6,6 @@ import SearchSuggestions from './SearchSuggestions'
 import { Link } from '@reach/router'
 import handleSearchSelectionInput from '../modules/events/handleSearchSelectionInput'
 import { SearchSuggestionsContext } from '../context/SearchSuggestionsContext'
-import { runAtEndOfEventLoop } from '../modules/events/runAtEndOfEventLoop'
 
 const SHOW_SEARCH_THRESHOLD = 100
 

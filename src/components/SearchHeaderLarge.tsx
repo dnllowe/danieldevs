@@ -6,7 +6,6 @@ import { submitSearch, submitSearchWithSuggestions } from '../modules/search/sub
 import SearchSuggestions from './SearchSuggestions'
 import { goToRandomPage } from '../modules/search/goToRandomPage'
 import handleSearchSelectionInput from '../modules/events/handleSearchSelectionInput'
-import { runAtEndOfEventLoop } from '../modules/events/runAtEndOfEventLoop'
 
 export default (props: { path: string }) => {
     
