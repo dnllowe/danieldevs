@@ -11,10 +11,12 @@ export default () => (
         <Router>
             <SearchHeaderLarge path='/' />
             <Page path='/:page-url' />
+            <Page path='/bloomberg/:page-url' />
             <Page path='/dotalign/:page-url' />
         </Router>
         <Router>
             <SearchHeaderMedium path='/:page-url' />
+            <SearchHeaderMedium path='/bloomberg/:page-url' />
             <SearchHeaderMedium path='/dotalign/:page-url' />
         </Router>
         <Router>

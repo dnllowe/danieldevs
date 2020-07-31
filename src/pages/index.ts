@@ -1,4 +1,5 @@
 import About from './About'
+import BloombergPages from './bloomberg'
 import DotAlignPages from './dotalign'
 import SOSeo from './SOSeo'
 import Barter from './Barter'
@@ -12,6 +13,7 @@ import Tap3 from './Tap3'
 
 export default [ 
     About,
+    ...BloombergPages,
     ...DotAlignPages,
     SOSeo,
     Barter,
