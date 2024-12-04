@@ -15,6 +15,7 @@ export default () => (
             <Page path='/entergrip/:page-url' />
             <Page path='/open-source/:page-url' />
             <Page path='/bgc/:page-url' />
+            <Page path='/side-projects/:page-url' />
         </Router>
         <Router>
             <SearchHeaderMedium path='/:page-url' />
@@ -23,6 +24,7 @@ export default () => (
             <SearchHeaderMedium path='/entergrip/:page-url' />
             <SearchHeaderMedium path='/open-source/:page-url' />
             <SearchHeaderMedium path='/bgc/:page-url' />
+            <SearchHeaderMedium path='/side-projects/:page-url' />
         </Router>
         <Router>
             <SearchResults path='/search' />

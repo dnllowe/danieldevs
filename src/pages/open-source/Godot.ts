@@ -9,7 +9,6 @@ const Godot: Page = {
     url: 'open-source/godot',
     keywords: [
         'godot',
-        'c++',
         'open source',
         'game development',
         'github',

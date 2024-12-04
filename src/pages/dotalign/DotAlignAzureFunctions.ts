@@ -2,7 +2,7 @@ import { Page } from '../Page'
 
 const DotAlignAzureFunction: Page = {
     title: 'DotAlign Azure Function Microservices',
-    keywords: ['dotalign', 'work experience', 'faas', 'microservice', 'micro service', 'serverless', 'azure functions', 'backend'],
+    keywords: ['dotalign', 'work experience', 'faas', 'microservice', 'micro service', 'serverless', 'backend'],
     description: "My contributions to the DotAlign cloud severless / micro service architecture",
     url: 'dotalign/severless-micro-services',
     technologies: ['c#', 'f#', '.net', 'javascript', 'typescript', 'azure functions'],

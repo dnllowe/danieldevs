@@ -10,10 +10,9 @@ const BGCUserPreferences: Page = {
     keywords: [
         'bgc',
         'interprocess communication',
-        'broadcast channel api',
-        'typescript',
-        'javascript',
         'frontend',
+        'fintech',
+        'work experience',
     ],
     technologies: ['broadcast channel api', 'typescript', 'javascript'],
     content: [
