@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Pages from '../pages'
 import { Page, RelatedPage } from '../pages/Page'
 import { getPagesByUrl } from '../modules/page/getPagesByUrl'

@@ -44,7 +44,7 @@ export default (props: { path: string }) => {
             onKeyDown={(e) => handleSearchSelectionInput(e, searchSuggestionsContext)}
         >
             <Link to='/'>
-                <h1 className='search-header-medium search-header-area'>Daniel Devs</h1>
+                <h1 className='search-header-medium search-header-area'>Daniel Develops</h1>
             </Link>
             <div className='search-bar-container-medium'>
                 <SearchBar />

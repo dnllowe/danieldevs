@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { SearchContext } from '../context/SearchContext'
 import { getAllKeywords } from '../modules/search/allKeywords'
 import Pages from '../pages'

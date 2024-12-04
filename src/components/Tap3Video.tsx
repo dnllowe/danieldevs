@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Tap3Video = () => (
     <iframe 
         className='tap3-video'

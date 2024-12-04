@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import SearchBar from './SearchBar'
 import { SearchContext } from '../context/SearchContext'
 import { SearchSuggestionsContext } from '../context/SearchSuggestionsContext'
@@ -22,7 +22,7 @@ export default (props: { path: string }) => {
                 }}
                 onKeyDown={(e) => handleSearchSelectionInput(e, searchSuggestionsContext)}
             >
-                <h1 className='search-header'>Daniel Devs...</h1>
+                <h1 className='search-header'>Daniel Develops...</h1>
                 <SearchBar />
                 <i className="search-bar-icon fas fa-times" onClick={() => searchContext.setSearchValue('')} />
                 { searchContext.showSuggestions && 

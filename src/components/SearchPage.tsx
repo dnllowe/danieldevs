@@ -1,4 +1,3 @@
-import React from 'react'
 import { Router } from '@reach/router'
 import SearchResults from './SearchResults'
 import Page from './Page'
@@ -13,11 +12,13 @@ export default () => (
             <Page path='/:page-url' />
             <Page path='/bloomberg/:page-url' />
             <Page path='/dotalign/:page-url' />
+            <Page path='/entergrip/:page-url' />
         </Router>
         <Router>
             <SearchHeaderMedium path='/:page-url' />
             <SearchHeaderMedium path='/bloomberg/:page-url' />
             <SearchHeaderMedium path='/dotalign/:page-url' />
+            <SearchHeaderMedium path='/entergrip/:page-url' />
         </Router>
         <Router>
             <SearchResults path='/search' />

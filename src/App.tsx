@@ -1,4 +1,3 @@
-import React from 'react'
 import './styles/Index.scss'
 
 import SearchContextProvider from './context/SearchContext'

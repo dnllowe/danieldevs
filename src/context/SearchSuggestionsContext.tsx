@@ -1,4 +1,4 @@
-import React, { useState, createContext, useMemo } from 'react'
+import { useState, createContext, useMemo } from 'react'
 
 export type SearchSuggestionsContext = {
     suggestions: string[]

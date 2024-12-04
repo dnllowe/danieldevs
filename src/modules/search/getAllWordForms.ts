@@ -1,3 +1,4 @@
+// tslint:disable-next-line no-var-requires
 const nlp = require('compromise')
 
 export const getAllWordForms = (word: string) => {

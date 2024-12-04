@@ -10,6 +10,7 @@ import Resume from './Resume'
 import Portfolio from './Portfolio'
 import GitHub from './GitHub'
 import Tap3 from './Tap3'
+import EnterGrip from './entergrip'
 
 export default [ 
     About,
@@ -23,5 +24,7 @@ export default [
     Resume,
     Portfolio,
     GitHub,
-    Tap3
+    Tap3,
+    ...EnterGrip,
+    
 ]
