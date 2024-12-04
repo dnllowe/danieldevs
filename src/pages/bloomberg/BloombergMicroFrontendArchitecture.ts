@@ -25,7 +25,8 @@ const BloombergMicroFrontendArchitecture: Page = {
             as the foundation. If our new architecture could build off of the fundamental building blocks of a website, I knew we could
             future proof the design for most frameworks. With this as the assumed foundation, it didn't matter if the developer chose to use
             React, Vue, Elm, or even continued using Angular. A micro frontend architecture that only requires html, css, and javascript as its
-            assets could accommodate all the above.`
+            assets could accommodate all the above. To further emphasize smooth developer experience, I authored a custom Angular schematic and Create React App template
+            that would allow developers to create new applications with a single command that adhered to the new architecture.`
         },
         {
             header: 'Deployment (Publishing to blob storage through npm and Jenkins)',

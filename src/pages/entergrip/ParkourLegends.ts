@@ -1,10 +1,11 @@
-
 import { Page } from '../Page'
 
 const ParkourLegends: Page = {
     title: 'Parkour Legends PC Game',
     description: "A fast-paced 2d pixel-art platformer where players use real parkour moves to overcome obstacles and beat levels as quickly as possible.",
     projectDates: '2022-2024',
+    url: 'entergrip/parkour-legends',
+    rank: 0,
     keywords: [
         'parkour legends',
         'entergrip',
@@ -70,11 +71,26 @@ const ParkourLegends: Page = {
             the player's current animation frame, position, time of day, score at that moment, and even which objects they've hit or knocked over and their positions and rotations.
             Every frame, if a value has changed, a new entry is added to an array. If no changes have occurred, no new data is recorded. This way, the data is "compressed" to only signficant moments.
             When play backa replay, a puppet-like representation of the player is simulated, taking the replay as its inputs instead of a controller. Values are lerped between entries
-            in the replay frame data, and players can watch or race against themselves in this manner. Because the replay is deterministic, players can also watch replays in slow motion or at 2x or 3x speed.`
+            in the replay frame data, and players can watch or race against themselves in this manner. Because the replay is deterministic, players can also watch replays in slow motion or at 2x or 3x speed.`,
+            relatedPages: [
+                {
+                    text: "Burger Flipper Prototype",
+                    url: "/entergrip/burger-flipper",
+                    external: false,
+                },
+                {
+                    text: "Route Way Prototype",
+                    url: "/entergrip/route-way",
+                    external: false,
+                },
+                {
+                    text: "Z Survivors Prototype",
+                    url: "/entergrip/z-survivors",
+                    external: false,
+                },
+            ]
         },
     ],
-    url: 'parkour-legends',
-    rank: 0
 }
 
 export default ParkourLegends
