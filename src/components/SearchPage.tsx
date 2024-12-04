@@ -13,12 +13,16 @@ export default () => (
             <Page path='/bloomberg/:page-url' />
             <Page path='/dotalign/:page-url' />
             <Page path='/entergrip/:page-url' />
+            <Page path='/open-source/:page-url' />
+            <Page path='/bgc/:page-url' />
         </Router>
         <Router>
             <SearchHeaderMedium path='/:page-url' />
             <SearchHeaderMedium path='/bloomberg/:page-url' />
             <SearchHeaderMedium path='/dotalign/:page-url' />
             <SearchHeaderMedium path='/entergrip/:page-url' />
+            <SearchHeaderMedium path='/open-source/:page-url' />
+            <SearchHeaderMedium path='/bgc/:page-url' />
         </Router>
         <Router>
             <SearchResults path='/search' />

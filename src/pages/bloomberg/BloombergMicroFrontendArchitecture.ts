@@ -1,7 +1,7 @@
 import { Page } from '../Page'
 
 const BloombergMicroFrontendArchitecture: Page = {
-    title: 'Bloomberg Microfronted Architecture',
+    title: 'Bloomberg Microfrontend Architecture',
     keywords: ['bloomberg', 'work experience', 'micro frontend', 'microfrontend', 'micro app', 'jenkins', 'nginx', 'devops'],
     description: "My contributions to the DotAlign cloud severless / micro service architecture",
     url: 'bloomberg/micro-frontend-architecture',

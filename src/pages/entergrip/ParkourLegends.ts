@@ -21,6 +21,7 @@ const ParkourLegends: Page = {
         'full stack',
         'projects',
         'game development',
+        'tools',
     ],
     technologies: ['c#', 'unity', 'aseprite', 'mongodb', 'azure functions', 'steam'],
     content: [
@@ -72,6 +73,22 @@ const ParkourLegends: Page = {
             Every frame, if a value has changed, a new entry is added to an array. If no changes have occurred, no new data is recorded. This way, the data is "compressed" to only signficant moments.
             When play backa replay, a puppet-like representation of the player is simulated, taking the replay as its inputs instead of a controller. Values are lerped between entries
             in the replay frame data, and players can watch or race against themselves in this manner. Because the replay is deterministic, players can also watch replays in slow motion or at 2x or 3x speed.`,
+            
+        },
+        {
+            header: "Tools and Productivity",
+            content: `To complete a full-length game as a solo dev in 18 months, you have to keep productivity high. To maximize my efforts, I created several scripts, tools, and custom Unity editors to speed up time-consuming tasks.
+            
+            One of the biggest automations was exporting all the frames I needed for sprite animations from Aseprite and importing them into Unity at the click of a button. For Aseprite, I wrote a script
+            that would isolate each layer, name it based on a convention, and export it in the right format for Unity. Because the player consists of over 30 layers, this saves hours of time.
+            Then, to import into Unity, the sprites must have certain properties about their size and bounding box set correctly before assigning sprites to the appropriate animations. I was able to configure these settings per animation and sprite
+            and automate the process of importing the sprites into Unity.
+            
+            Other important tools included custom editors to randomly place objects and sprites along a given region of space with a configurable density,
+            tools to rotate objects and set the time of day so I could adjust and fix issues with lighting and cast shadows, and a script to reparent prefab objects--a task which otherwise requires manually copying
+            all scripts and behaviors from the parent to a new child.
+            
+            Without these tools, I would have spent countless hours, days, and weeks manually performing tasks, which would have either led to decreasing the scope for the game or adding extra months of development time.`,
             relatedPages: [
                 {
                     text: "Burger Flipper Prototype",
