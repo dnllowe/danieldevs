@@ -28,10 +28,16 @@ const DotAlignDockerMigration: Page = {
             header: 'Containerizing DotAlign',
             content: `DotAlign was a .NET WPF application. Certain coding decisions and patterns were
             made with the asummption that DotAlign had a UI and required input from a user. 
+
+            \n
             My first tasks were:
+            \n
             1) Finding any user-set configuration and applying those to environment variables
+            \n
             2) Creating a console application and entry point for Docker that ran all the application business logic
+            \n
             3) Standardizing the user deployment and service images and configurations
+            \n
             4) Reseraching and implementing Docker-based approaches for things like persisting data, exposing ports, and communication between deployments`
         },
         {

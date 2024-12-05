@@ -5,7 +5,7 @@ import DotAlignPortal from './DotAlignPortal'
 import DotAlignAzureFunction from './DotAlignAzureFunctions'
 import DotAlignRestApi from './DotAlignRestApi'
 import DotAlignMergeUsers from './DotAlignMergeUsers'
-import DotAlignRetentionPolicy from './DotAlignRetentialPolicy'
+import DotAlignRetentionPolicy from './DotAlignRetentionPolicy'
 
 export default [
     DotAlignDockerMigration,

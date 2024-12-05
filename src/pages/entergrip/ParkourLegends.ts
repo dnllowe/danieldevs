@@ -55,6 +55,7 @@ const ParkourLegends: Page = {
             In a way, the entire game is a large finite state machine. Some modules, such as the AI for the security guard, are smaller independent statemachines.
             All of the physics properties are custom and hand-tuned to give the game the perfect feel and sense of speed, though I rely on Unity's physics engine to detect collisions.
             
+            \n
             On the backend, I use Mongo DB to store high scores and replays for each level and a web API using Azure Functions to perform CRUD operations on high scores.`
         },
         {
@@ -72,19 +73,23 @@ const ParkourLegends: Page = {
             header: "Tools and Productivity",
             content: `To complete a full-length game as a solo dev in 18 months, you have to keep productivity high. To maximize my efforts, I created several scripts, tools, and custom Unity editors to speed up time-consuming tasks.
             
+            \n
             One of the biggest automations was exporting all the frames I needed for sprite animations from Aseprite and importing them into Unity at the click of a button. For Aseprite, I wrote a script
             that would isolate each layer, name it based on a convention, and export it in the right format for Unity. Because the player consists of over 30 layers, this saves hours of time.
             Then, to import into Unity, the sprites must have certain properties about their size and bounding box set correctly before assigning sprites to the appropriate animations. I was able to configure these settings per animation and sprite
             and automate the process of importing the sprites into Unity.
 
+            \n
             Another huge time-saver was creating tools to automatically generate a level's tilemap (the art for the level geometry) and triggers (things like grip points, crawl spaces, etc) based on a given set of tiles and the level geometry.
             So, instead of ever manually placing art or physics triggers for gameplay, I could do this at the click of a button for the art (and the physics triggers were generated near-instantly while loading the level).
             This meant I could prototype and iterate on ideas quickly and never had to stop and create or redo any aspects of the level's art of triggers due to changing designs.
             
+            \n
             Other important tools included custom editors to randomly place objects and sprites along a given region of space with a configurable density,
             tools to rotate objects and set the time of day so I could adjust and fix issues with lighting and cast shadows, and a script to reparent prefab objects--a task which otherwise requires manually copying
             all scripts and behaviors from the parent to a new child.
             
+            \n
             Without these tools, I would have spent countless hours, days, and weeks manually performing tasks, which would have either led to decreasing the scope for the game or adding extra months of development time.`,
             relatedPages: [
                 {

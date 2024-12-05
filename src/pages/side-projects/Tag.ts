@@ -29,6 +29,7 @@ const Tag: Page = {
             can get by just re-Googling the topic or typing the first few letters of a half-remembered URL into the search bar and getting an auto-complete result. Perhaps the
             bookmark count is unforgivable. A personal problem. But regardless, it exists for me, and I wanted a more elegant solution.
 
+            \n
             Enter Tag. Tag is a Chrome extension I built that lets me organize content by, you guessed it, tags. The novel difference here is that content could--and I would argue should--have
             multiple tags. Come across a great article on a way to implement some gameplay in Unity? Does that go under your C# folder or Unity folder? Probably Unity. But if you get enough
             scenarios like this, it becomes hard to keep track of what should go where. With Tag, I don't have to decide. I tag the article as "C#", "Unity", "Game Development", "Pathfinding", and whatever else I want.

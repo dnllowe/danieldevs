@@ -44,6 +44,7 @@ const BurgerFlipper: Page = {
             small physics objects. In this game, I wanted every french fry or chicken nugget to react realistically to physics, so I made the choice to port to Unreal Engine 4,
             which employs the Havok physics engine. Physics behavior improved drastically and performance got a boost.
             
+            \n
             Although more familiar with Unity at the time, I also chose Unreal in general because it has more built-in tools and systems
             to prototype this type of game more rapidly. Animation tools, the Behavior Tree Plugin, and Blueprints with a lot of ready-made helper functions to name a few.`,
             relatedPages: [

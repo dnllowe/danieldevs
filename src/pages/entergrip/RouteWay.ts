@@ -29,6 +29,7 @@ const RouteWay: Page = {
             roads that travel between multiple towns, generating towns of varying density, and generating organic landmasses
             to place everything on.
 
+            \n
             This was very satisfying to create, but in the end, the result was too complex and didn't fit with the cozy theme.
             I later stripped the procedural generation back to only generating different sized blocks to fill a set space, then
             populate them with buildings and surround them with streets and parks. This led to a more organized and "cozy" feeling grid of buildings and roads.`

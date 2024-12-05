@@ -32,6 +32,7 @@ const BGCInterprocessCommunication: Page = {
             With this in place, I created a system where a Channel can associate itself to the ID of another tab or window.
             Then, as messages are passed throughout the application, they can be routed to the correct window and tab.
             
+            \n
             Now, as long as data and application state is kept serializable, it can be shared across different processes.`,
             relatedPages: [
                 {

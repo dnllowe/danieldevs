@@ -50,25 +50,32 @@ const Maia: Page = {
             which fields they wanted to import into Maia. Later, users could even append more data by uploading
             new entries of either the same schema or provide a property to join on.
             
+            \n
             1) Raw text input
 
+            \n
             Users could input raw json or csv data directly into a text field. This was the simpleset way to import data
             if users just wanted to test functionality or didnn't have a large dataset to import.
 
+            \n
             2) Uploading a file
 
+            \n
             Users could upload a file from their local machine. Files sizes of up to 1TB were supported. To support such
             large files, I made use of web workers to maximize the performance for the task. An initial web worker would
             begin reading data from the file. After it was done, a second work would parse the data to analyze the fields and schema of the data.
             A third web worker would then upload the chunk to a database. By the time any one worker was completed with its task, the next one was ready
             to provide it with the next chunk of data. With this method, even a terabyte of data could be processed and uploaded in its entirety in around an hour.
             
+            \n
             3) API
 
+            \n
             Finally, users could import data from a web API. Users provided a URL, paging parameters, and how many pages to fetch. Maia could then
             fetch data from the API one page at a time, processing and uploading the data. This would be convenient for users who had APIs they could
             use to import data data or knew of public APIs that they wanted to gather data from.
 
+            \n
             Although perhaps a typical use case, I did not implement the ability to import directlyh from another database. As a matter of scope, I
             decided to leave this out of the application until it became a requested feature from users.
             `
@@ -80,9 +87,11 @@ const Maia: Page = {
             Data was stored in S3 and was imported into the python environment. Depending on the size of the data, my backend would choose either a Google Cloud Run instance
             to execute the analysis, or a Google Kubernetes Engine instance (dynamically specifying the amount of CPU and memory needed).
 
+            \n
             After having the required CPU and, most importantly, memory to process the data, I then used vaex to calculate statistics, such as mean, median, mode, min, max, etc
             for all fields. These statistics were saved so they didn't have to be recalculated, and allowed users to quickly get an idea about their data after importing it.
 
+            \n
             I explored many options for processing large amounts of data, including dask, AWS Fargate, and Apache Airflow.
             However, the most effective solution after much experimentation was GKE.
             `

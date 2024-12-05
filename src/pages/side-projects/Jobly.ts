@@ -34,6 +34,7 @@ const Jobly: Page = {
             as a classification problem. The goal: assign emails as either a job-related email or not. I went through and tagged all the emails as either job-related or not
             and let Vertex train on the data. The model generated had a 99% accuracy for identifying whether jobs were email-related or not.
             
+            \n
             The second component was an additional AI model. This model would presume an email was job-related. The purpose of this model was to extract important characteristics about
             the job email. I marked common language related to salary ranges, technology stacks used, company, seniority level desired, years of experience desired, location, remote vs in-office,
             and all manner of perks. This model could then look at an email and extract these properties.`
