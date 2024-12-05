@@ -45,7 +45,7 @@ const Tag: Page = {
         {
             header: "Moving On",
             content: `Ultimately, I got Tag to an working state and dog-fooded it for a while. However, after realizing that Chrome extensions don't work on mobile,
-            it seemed like an uphill battle to truly adopt the app into my life. Meaning it would be that much less likely for other users to adopt.
+            it seemed like an uphill battle to truly adopt the app into my life--meaning it would be that much less likely for other users to adopt.
             It works great as a desktop Chrome extension, and could even work as a standalone app on mobile, but it would lose a great deal of UX in the process.`
         }
     ]
