@@ -19,17 +19,21 @@ const ZSurvivors: Page = {
     content: [
         {
             header: "Game Design",
-            content: `Z Survivors is a zombie survivor-like prototype I made in Unity.
-            The central idea was to make every aspect of a weapon configurable. Bullet speed, spread,
-            damage, reload time, ammo capacity, etc. All of these could be upgradable parts, but there would
-            be a limit on how much players could upgrade. This would give players a choice on how to experiment
-            and advance based on their playstyle, strategies, or types of enemies in various waves.`,
+            content: [
+                `Z Survivors is a zombie survivor-like prototype I made in Unity.
+                The central idea was to make every aspect of a weapon configurable. Bullet speed, spread,
+                damage, reload time, ammo capacity, etc. All of these could be upgradable parts, but there would
+                be a limit on how much players could upgrade. This would give players a choice on how to experiment
+                and advance based on their playstyle, strategies, or types of enemies in various waves.`,
+            ]
         },
         {
             header: "Tech",
-            content: `I used DOTS and data oriented design, with Systems that operated on chunks of contiguous structs in memory for optimal performance with the multi-threaded Unity Job System.
-            With this methodology, I was able to render tens of thousdands of enemies and bullets on screen at once,
-            which was important to the design of the game to keep the player engaged.`,
+            content: [
+                `I used DOTS and data oriented design, with Systems that operated on chunks of contiguous structs in memory for optimal performance with the multi-threaded Unity Job System.
+                With this methodology, I was able to render tens of thousdands of enemies and bullets on screen at once,
+                which was important to the design of the game to keep the player engaged.`,
+            ],
             relatedPages: [
                 {
                     text: "Parkour Legends",

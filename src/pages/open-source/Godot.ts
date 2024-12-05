@@ -17,10 +17,12 @@ const Godot: Page = {
     content: [
         {
             header: "Real-time Animation Preview",
-            content: `Godot gives developers the ability to author animations based on properties and keyframes. However, the UX wasn't great.
-            You were not able to see the effects of the change in real-time. Instead, developers had to play the animation to see its effect.
-            This is quite tedious if you're trying to adjust animation keyframes based on other keyframes at once before previewing during actual play.
-            Because Godot is open source, I found a way to add this feature and submitted a PR. After some feedback and suggestions, it was merged into the engine.`,
+            content: [
+                `Godot gives developers the ability to author animations based on properties and keyframes. However, the UX wasn't great.
+                You were not able to see the effects of the change in real-time. Instead, developers had to play the animation to see its effect.
+                This is quite tedious if you're trying to adjust animation keyframes based on other keyframes at once before previewing during actual play.
+                Because Godot is open source, I found a way to add this feature and submitted a PR. After some feedback and suggestions, it was merged into the engine.`,
+            ],
             relatedPages: [
                 {
                     text: "Godot Pull Request",

@@ -48,7 +48,7 @@ export const getSearchResults = (pages: Page[], searchValue: string) => {
         pageCopy.content.forEach(c => {
 
             const header = c.header ? getTestableWords(c.header) : ''
-            const content = getTestableWords(c.content)
+            const content = getTestableWords(c.content.join('\n'))
 
             const headerWords = header.length ? header.split(' ') : []
             const contentWords = content.length ? content.split(' ') : []

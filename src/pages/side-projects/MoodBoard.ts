@@ -21,11 +21,12 @@ const MoodBoard: Page = {
     content: [
         {
             header: "Overview",
-            content: `Mood Board is a desktop application that allows users to quickly drag and drop images onto a canvas.
-            Partly inspired by the Arc Browser and the infinitely scrolling canvases of apps like Figma, I wanted to simple desktop (not web / user-authenticated) application
-            that would allow me to quickly save images to use as reference while creating games. The idea was to use Tauri or Electron (probably Tauri for its improved performance and smaller memory footprint)
-            to create a cross-platform application out of the web-based Svelte frontend and save mood boards locally onto the user's machine.
-            `
+            content: [
+                `Mood Board is a desktop application that allows users to quickly drag and drop images onto a canvas.
+                Partly inspired by the Arc Browser and the infinitely scrolling canvases of apps like Figma, I wanted to simple desktop (not web / user-authenticated) application
+                that would allow me to quickly save images to use as reference while creating games. The idea was to use Tauri or Electron (probably Tauri for its improved performance and smaller memory footprint)
+                to create a cross-platform application out of the web-based Svelte frontend and save mood boards locally onto the user's machine.`,
+            ]
         }
     ]
 }

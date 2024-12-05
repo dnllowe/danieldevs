@@ -9,20 +9,20 @@ const DotAlignQuadParser: Page = {
     content: [
         {
             header: "Overview",
-            content: `In the new DotAlign Cloud API, we deal with data in QUADs. 
+            content: [`In the new DotAlign Cloud API, we deal with data in QUADs. 
             QUADs relate to the Resource Description Framework (RDF) format and, at a high level,
             describe data in terms of subject (what data we're referring to), 
             predicate (what property of the data), object (the value of that property), and graph
             (who the data belongs to).
             \nBecause the full definition of an object might be spread across many disparate properties,
-            we needed a way to distill it back into a complete object for client-side applications.`
+            we needed a way to distill it back into a complete object for client-side applications.`]
         },
         {
             header: "Building the output",
-            content: `I was able to efficiently map the QUADs to json by reading through the properties
+            content: [`I was able to efficiently map the QUADs to json by reading through the properties
             and appending entities and their properties to hash maps. I built the final json object
             by selecting the relevant objects from the hash map, including any objects that the entity
-            only had a referenced ID for.`
+            only had a referenced ID for.`]
         },
 
     ],

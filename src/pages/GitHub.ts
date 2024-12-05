@@ -15,9 +15,11 @@ const GitHub: Page = {
     content: [
         {
             header: '',
-            content: `I use git and GitHub as my go-to for version control. 
-            Check out my code on GitHub. Some of the more interesting repos are private,
-            but feel free to reach out if you want a closer look.`,
+            content: [
+                `I use git and GitHub as my go-to for version control. 
+                Check out my code on GitHub. Some of the more interesting repos are private,
+                but feel free to reach out if you want a closer look.`
+            ],
             relatedPages: [
                 {
                     url: 'https://github.com/dnllowe',

@@ -12,7 +12,7 @@ type SectionImage = {
 }
 
 type PageSection = {
-    content: string
+    content: string[]
     header?: string
     img?: SectionImage
     relatedPages?: RelatedPage[],

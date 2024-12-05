@@ -7,7 +7,9 @@ const LinkedIn: Page = {
     rank: 0,
     content: [{
         header: '',
-        content: 'Check out my work history and experince on LinkedIn.',
+        content: [
+            'Check out my work history and experince on LinkedIn.'
+        ],
         relatedPages: [
             {
                 url: 'https://linkedin.com/in/dnllowe',

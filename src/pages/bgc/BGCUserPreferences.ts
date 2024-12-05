@@ -18,9 +18,9 @@ const BGCUserPreferences: Page = {
     content: [
         {
             header: "Use Case",
-            content:`I designed the data model, API, and UI which allows users to customize the application.
+            content: [`I designed the data model, API, and UI which allows users to customize the application.
             Settings include window placement, tab order, layouts and actions based on incoming data.
-            Settings are fetched from the backend at startup and synchronized across all tabs and windows using the broadcast channel API."`,
+            Settings are fetched from the backend at startup and synchronized across all tabs and windows using the broadcast channel API."`],
             relatedPages: [
                 {
                     text: "BGC Interprocess Communication with Boradcast Channel API",

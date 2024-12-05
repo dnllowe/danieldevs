@@ -9,7 +9,9 @@ const Resume: Page = {
     rank: 0,
     content: [{
         header: '',
-        content: 'The traditional resume for my most recent work experience and software projects.',
+        content: [
+            'The traditional resume for my most recent work experience and software projects.'
+        ],
         component: ResumeView
     }]
 }

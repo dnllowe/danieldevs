@@ -10,10 +10,10 @@ const DotAlignMergeUsers: Page = {
     content: [
         {
             header: 'Overview',
-            content: `A common business need for some clients is to clear internal data periodically. 
+            content: [`A common business need for some clients is to clear internal data periodically. 
             This, of course, includes data DotAlign persists. To comply with this need, I created a SQL
             step that runs periodically on all tables that store email data. If the creation date of the
-            entity exceeds the retention policy, the data is cleared.`
+            entity exceeds the retention policy, the data is cleared.`]
         }
     ],
     rank: 0

@@ -51,7 +51,7 @@ const PageView = (props: { page: Page }) => {
                     <section key={key++}>
                         {c.header && <h3 className='page-section-header'>{c.header}</h3>}
                         {c.img && <Image {...c.img} />}
-                        <p className='page-section-content'>{c.content}</p>
+                        {c.content.map(content => <p className='page-section-content'>{content}</p>)}
                         { c.component && c.component(null) }
                         {c.relatedPages && 
                             <div className='related-pages-container'>
