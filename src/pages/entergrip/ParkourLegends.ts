@@ -14,6 +14,7 @@ const ParkourLegends: Page = {
         'projects',
         'game development',
         'tools',
+        '.net',
     ],
     technologies: ['c#', 'unity', 'aseprite', 'mongodb', 'azure functions', 'steam'],
     content: [

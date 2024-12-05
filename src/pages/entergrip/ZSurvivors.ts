@@ -13,6 +13,7 @@ const ZSurvivors: Page = {
         'projects',
         'game development',
         'prototypes',
+        '.net',
     ],
     technologies: ['unity', 'c#', 'DOTS', 'burst', 'job system', 'data oriented design', 'multithreading'],
     content: [

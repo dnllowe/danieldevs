@@ -3,6 +3,7 @@ import { Page } from "../Page"
 const Jobly: Page = {
     title: 'Jobly',
     description: "Jobly is a service that sorts through your inbox, marking emails from recruiters for jobs you're likely to be interested in.",
+    projectDates: '2021',
     url: 'side-projects/jobly',
     rank: 0,
     keywords: [
@@ -15,6 +16,9 @@ const Jobly: Page = {
         'chrome extension',
         'azure functions',
         'vertex ai',
+        'node',
+        'typescript',
+        'javascript',
     ],
     content: [
         {

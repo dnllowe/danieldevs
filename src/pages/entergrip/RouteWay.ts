@@ -11,6 +11,7 @@ const RouteWay: Page = {
         'projects',
         'game development',
         'prototypes',
+        '.net',
     ],
     technologies: ['c#', 'unity', 'steam', 'burst', 'DOTS', 'data oriented design', 'multithreading', 'job system', 'procedural generation'],
     content: [
