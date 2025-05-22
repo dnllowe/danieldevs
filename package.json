@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "serve": "yarn build && npx serve -s dist",
-    "deploy": "yarn build && cp -r dist/ ../dnllowe.github.io && cd ../dnllowe.github.io && git add . && git commit -m 'deploy' && git push heroku main",
+    "deploy": "yarn build && cp dist/index.html dist/404.html && cp -r dist/ ../dnllowe.github.io && cd ../dnllowe.github.io && git add . && git commit -m 'deploy' && git push heroku main",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
