@@ -2,7 +2,7 @@ import { Page } from "../Page"
 
 const Connect2Golf: Page = {
     title: 'Connect 2 Golf',
-    description: "Connect 2 Golf is an social golf application that connects players with each other.",
+    description: "Connect 2 Golf is a social golf application that connects players with each other.",
     url: 'side-projects/connect-2-golf',
     projectDates: '2024',
     rank: 0,
